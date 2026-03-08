@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>実務テキスト｜簿記・税務・経理の完全ガイド</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#e8dcc8;--surface:#f5efe5;--text:#1a1a1a;--text-mid:#4a4540;--text-light:#8a8078;--border:#c8b99a;--accent:#3a5a7a;--accent-light:#4a7090;--sidebar-bg:#2d2a26;--sidebar-text:#d4c8b4}
+body{font-family:"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;background:var(--bg);color:var(--text);line-height:1.8;font-size:15px}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-light)}
+
+/* Progress Bar */
+#progress-bar{position:fixed;top:0;left:0;height:3px;background:var(--accent);z-index:1000;transition:width .1s}
+
+/* Sidebar */
+#sidebar{position:fixed;top:0;left:0;width:280px;height:100vh;background:var(--sidebar-bg);color:var(--sidebar-text);overflow-y:auto;z-index:900;padding:20px 0;transition:transform .3s}
+#sidebar .back-link{display:block;padding:10px 24px;font-size:13px;color:var(--sidebar-text);border-bottom:1px solid #4a4540;margin-bottom:10px;opacity:.8}
+#sidebar .back-link:hover{opacity:1}
+#sidebar h2{padding:10px 24px;font-size:14px;color:var(--text-light);letter-spacing:1px}
+#sidebar ul{list-style:none}
+#sidebar li a{display:block;padding:6px 24px;font-size:13px;color:var(--sidebar-text);border-left:3px solid transparent;opacity:.75}
+#sidebar li a:hover,#sidebar li a.active{opacity:1;border-left-color:var(--accent);background:rgba(255,255,255,.05)}
+#sidebar .part-label{padding:12px 24px 4px;font-size:11px;color:var(--text-light);text-transform:uppercase;letter-spacing:1px;margin-top:8px}
+
+/* Hamburger */
+#hamburger{display:none;position:fixed;top:12px;left:12px;z-index:950;background:var(--sidebar-bg);color:var(--sidebar-text);border:none;padding:8px 12px;border-radius:4px;font-size:20px;cursor:pointer}
+
+/* Main Content */
+#main{margin-left:280px;max-width:860px;padding:40px 48px 80px}
+h1{font-size:28px;color:var(--text);margin-bottom:8px;border-bottom:3px solid var(--accent);padding-bottom:12px}
+.subtitle{color:var(--text-mid);font-size:14px;margin-bottom:40px}
+h2{font-size:22px;color:var(--text);margin:48px 0 16px;padding:8px 0;border-bottom:2px solid var(--border)}
+h3{font-size:17px;color:var(--text-mid);margin:28px 0 12px}
+h4{font-size:15px;color:var(--accent);margin:20px 0 8px}
+p{margin-bottom:14px;color:var(--text-mid)}
+
+/* Boxes */
+.box{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:20px;margin:16px 0}
+.box-title{font-weight:bold;color:var(--text);margin-bottom:8px;font-size:14px}
+.box-accent{border-left:4px solid var(--accent)}
+.box-warn{border-left:4px solid #b8860b;background:#fdf8ef}
+.box-example{border-left:4px solid #5a8a5a;background:#f5f9f5}
+
+/* Tables */
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:13px}
+th{background:var(--sidebar-bg);color:var(--sidebar-text);padding:8px 12px;text-align:left;font-weight:normal}
+td{padding:8px 12px;border-bottom:1px solid var(--border);color:var(--text-mid)}
+tr:hover td{background:rgba(58,90,122,.04)}
+
+/* Details */
+details{background:var(--surface);border:1px solid var(--border);border-radius:6px;margin:12px 0;padding:0}
+summary{padding:12px 16px;cursor:pointer;font-weight:bold;font-size:14px;color:var(--accent);list-style:none}
+summary::before{content:"+ ";font-weight:bold}
+details[open] summary::before{content:"- "}
+details .inner{padding:4px 16px 16px}
+
+/* SVG Charts */
+.chart-container{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:20px;margin:16px 0;text-align:center;overflow-x:auto}
+.chart-container svg{max-width:100%}
+
+/* Footer */
+footer{margin-left:280px;text-align:center;padding:30px;color:var(--text-light);font-size:12px;border-top:1px solid var(--border)}
+
+/* Responsive */
+@media(max-width:860px){
+  #sidebar{transform:translateX(-100%)}
+  #sidebar.open{transform:translateX(0)}
+  #hamburger{display:block}
+  #main,footer{margin-left:0}
+  #main{padding:60px 20px 40px}
+}
+</style>
+</head>
+<body>
+<div id="progress-bar"></div>
+<button id="hamburger" onclick="document.getElementById('sidebar').classList.toggle('open')">&#9776;</button>
+
+<nav id="sidebar">
+  <a href="index.html" class="back-link">&larr; トップに戻る</a>
+  <h2>目次</h2>
+  <div class="part-label">第1部</div>
+  <ul>
+    <li><a href="#sec1-1">簿記とは</a></li>
+    <li><a href="#sec1-2">勘定科目5分類</a></li>
+    <li><a href="#sec1-3">仕訳の実務</a></li>
+    <li><a href="#sec1-4">帳簿の種類</a></li>
+    <li><a href="#sec1-5">試算表の作成</a></li>
+    <li><a href="#sec1-6">決算整理仕訳</a></li>
+  </ul>
+  <div class="part-label">第2部</div>
+  <ul>
+    <li><a href="#sec2-1">損益計算書(PL)</a></li>
+    <li><a href="#sec2-2">貸借対照表(BS)</a></li>
+    <li><a href="#sec2-3">CF計算書</a></li>
+    <li><a href="#sec2-4">3表の数値例</a></li>
+  </ul>
+  <div class="part-label">第3部</div>
+  <ul>
+    <li><a href="#sec3-1">確定申告の手順</a></li>
+    <li><a href="#sec3-2">青色申告</a></li>
+    <li><a href="#sec3-3">消費税申告</a></li>
+    <li><a href="#sec3-4">法人税申告</a></li>
+    <li><a href="#sec3-5">源泉徴収</a></li>
+    <li><a href="#sec3-6">社会保険</a></li>
+  </ul>
+  <div class="part-label">第4部</div>
+  <ul>
+    <li><a href="#sec4-1">日次業務</a></li>
+    <li><a href="#sec4-2">月次業務</a></li>
+    <li><a href="#sec4-3">年次業務</a></li>
+    <li><a href="#sec4-4">会計ソフト比較</a></li>
+  </ul>
+  <div class="part-label">第5部</div>
+  <ul>
+    <li><a href="#sec5-1">収益性分析</a></li>
+    <li><a href="#sec5-2">安全性分析</a></li>
+    <li><a href="#sec5-3">効率性・資金繰り</a></li>
+  </ul>
+  <div class="part-label">第6部</div>
+  <ul>
+    <li><a href="#sec6-1">税務カレンダー</a></li>
+    <li><a href="#sec6-2">決算チェックリスト</a></li>
+    <li><a href="#sec6-3">届出・設立</a></li>
+  </ul>
+</nav>
+
+<div id="main">
+<h1>簿記・税務・経理 実務テキスト</h1>
+<p class="subtitle">実務で使える手順と計算を、ゼロから丁寧に解説（2025-2026年度対応）</p>
+
+<!-- ========== 第1部 ========== -->
+<h2 id="sec1-1">第1部：簿記の基本 ── 取引を記録する技術</h2>
+
+<p>この第1部では、事業のお金の動きを正確に記録するための技術「簿記」を、ゼロからすべて解説します。簿記は会計・税務・財務のすべての土台です。ここを理解しないまま先に進んでも、確定申告も決算も正しくできません。逆に言えば、簿記さえ理解すれば、あとの実務はすべてその応用にすぎません。</p>
+
+<h3>1-1. 簿記とは何か</h3>
+<p><strong>簿記（ぼき）</strong>とは、事業で発生するすべてのお金の動きを、決められたルールに従って帳簿に記録する技術のことです。「簿記」という言葉は「帳簿に記入する」の略です。</p>
+
+<p>なぜ簿記が必要なのか。理由は3つあります。</p>
+<p><strong>理由1：自分のビジネスの状態を正確に把握するため。</strong>記録がなければ、今月いくら儲かったのか、手元にいくらお金があるのか、借金がいくら残っているのかがわかりません。経営判断のしようがないということです。</p>
+<p><strong>理由2：税金を正しく計算するため。</strong>確定申告や法人税申告では、1年間の収入と経費を正確に集計する必要があります。帳簿がなければ、税金の計算ができません。</p>
+<p><strong>理由3：外部への説明のため。</strong>銀行から融資を受けるとき、取引先と契約するとき、投資家に説明するとき──すべて帳簿に基づいた財務諸表（ざいむしょひょう＝会社の成績表のようなもの）が求められます。</p>
+
+<p>記録の方法には2種類あります。</p>
+
+<div class="box box-accent">
+<div class="box-title">単式簿記と複式簿記の違い</div>
+<p><strong>単式簿記</strong>（たんしきぼき）：家計簿と同じ方式です。「3月5日、文房具を買った、1,000円出ていった」のように、お金の出入りだけを1行で記録します。メリットは簡単なこと。デメリットは、「今、財産がいくらあるか」「借金がいくら残っているか」といった全体像が見えないことです。青色申告では10万円控除しか受けられません。</p>
+<p><strong>複式簿記</strong>（ふくしきぼき）：1つの取引を必ず「2つの側面」から記録する方法です。たとえば「文房具を現金で買った」なら、(1)「消耗品費という費用が1,000円増えた」と(2)「現金が1,000円減った」の両方を同時に記録します。すべての取引を借方（かりかた＝左側）と貸方（かしかた＝右側）の両方に同じ金額を記入するため、帳簿の左右は常に一致します。この仕組みのおかげで、記録ミスがあれば左右が合わなくなるので、自動的にエラーを検出できます。500年以上前にイタリアで考案された仕組みですが、現在でも世界中の企業が使っています。青色申告65万円控除を受けるにはこの方式が必須です。</p>
+</div>
+
+<!-- 仕訳フロー図 SVG -->
+<div class="chart-container">
+<svg viewBox="0 0 700 160" width="700" height="160">
+  <defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#3a5a7a"/></marker></defs>
+  <rect x="10" y="50" width="120" height="50" rx="6" fill="#f5efe5" stroke="#3a5a7a" stroke-width="2"/>
+  <text x="70" y="80" text-anchor="middle" font-size="13" fill="#1a1a1a">取引発生</text>
+  <line x1="130" y1="75" x2="175" y2="75" stroke="#3a5a7a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="180" y="50" width="120" height="50" rx="6" fill="#f5efe5" stroke="#3a5a7a" stroke-width="2"/>
+  <text x="240" y="72" text-anchor="middle" font-size="12" fill="#1a1a1a">借方・貸方を</text>
+  <text x="240" y="88" text-anchor="middle" font-size="12" fill="#1a1a1a">判断</text>
+  <line x1="300" y1="75" x2="345" y2="75" stroke="#3a5a7a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="350" y="50" width="120" height="50" rx="6" fill="#f5efe5" stroke="#3a5a7a" stroke-width="2"/>
+  <text x="410" y="80" text-anchor="middle" font-size="13" fill="#1a1a1a">仕訳帳に記入</text>
+  <line x1="470" y1="75" x2="515" y2="75" stroke="#3a5a7a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="520" y="50" width="140" height="50" rx="6" fill="#f5efe5" stroke="#3a5a7a" stroke-width="2"/>
+  <text x="590" y="72" text-anchor="middle" font-size="12" fill="#1a1a1a">総勘定元帳に</text>
+  <text x="590" y="88" text-anchor="middle" font-size="12" fill="#1a1a1a">転記</text>
+  <text x="350" y="30" font-size="13" fill="#3a5a7a" font-weight="bold">仕訳の基本フロー</text>
+</svg>
+</div>
+
+<h3 id="sec1-2">1-2. 勘定科目の5分類</h3>
+<p><strong>勘定科目（かんじょうかもく）</strong>とは、お金の動きに付ける「名札」のことです。たとえば「現金」「売上高」「地代家賃」などがすべて勘定科目です。取引が発生したとき、「この取引はどの名札を使って記録するか」を判断するのが、仕訳の第一歩です。</p>
+
+<p>すべての勘定科目は、以下の<strong>5つのグループ</strong>に分類されます。この5分類は簿記の最も基本的な枠組みなので、確実に理解してください。</p>
+
+<table>
+<tr><th>分類</th><th>意味</th><th>具体的に何を指すか</th><th>増加する側</th><th>主要な勘定科目</th></tr>
+<tr><td><strong>資産</strong></td><td>会社が持っている財産</td><td>現金、銀行預金、商品在庫、建物、土地、売掛金（まだ回収していない代金）など、「価値があるもの」すべて</td><td>借方（左）</td><td>現金、普通預金、当座預金、売掛金、受取手形、棚卸資産、前払費用、建物、車両運搬具、土地、ソフトウェア</td></tr>
+<tr><td><strong>負債</strong></td><td>将来支払う義務</td><td>銀行からの借入金、仕入先にまだ払っていない代金（買掛金）、従業員から預かっている税金など、「いずれ出ていくお金」</td><td>貸方（右）</td><td>買掛金、支払手形、短期借入金、長期借入金、未払金、未払費用、預り金、前受金、未払法人税等</td></tr>
+<tr><td><strong>純資産</strong></td><td>資産から負債を引いた残り</td><td>会社の「本当の持ち分」。オーナーが出したお金（資本金）と、これまで稼いで蓄積した利益（利益剰余金）の合計</td><td>貸方（右）</td><td>資本金、資本準備金、利益剰余金、繰越利益剰余金</td></tr>
+<tr><td><strong>収益</strong></td><td>事業で稼いだお金</td><td>商品やサービスを提供して得た対価、預金の利息、資産の売却益など、「入ってきた価値」</td><td>貸方（右）</td><td>売上高、受取利息、受取配当金、雑収入、有価証券売却益、固定資産売却益</td></tr>
+<tr><td><strong>費用</strong></td><td>収益を得るために使ったお金</td><td>商品の仕入代金、従業員の給料、事務所の家賃、電気代など、「事業を運営するためにかかったコスト」</td><td>借方（左）</td><td>仕入高、給料手当、法定福利費、地代家賃、水道光熱費、通信費、旅費交通費、消耗品費、減価償却費、支払利息、租税公課</td></tr>
+</table>
+
+<div class="box box-warn">
+<div class="box-title">借方・貸方の覚え方</div>
+<p>なぜ資産と費用は「借方（左）で増える」のか。貸借対照表（BS）を思い浮かべてください。BSの左側には資産が並び、右側には負債と純資産が並びます。これが簿記のルールの原型です。</p>
+<p><strong>左側（借方）で増えるもの：</strong>資産と費用。「会社が持っているもの」と「使ったお金」は左。</p>
+<p><strong>右側（貸方）で増えるもの：</strong>負債、純資産、収益。「借りているお金」「自分の持ち分」「稼いだお金」は右。</p>
+<p>減少するときは逆側に記入します。たとえば、現金（資産）が減るときは貸方（右）に記入します。</p>
+</div>
+
+<h4>主要な勘定科目の詳細説明</h4>
+<details>
+<summary>よく使う勘定科目30選とその意味</summary>
+<div class="inner">
+<h4>資産の勘定科目</h4>
+<p><strong>現金</strong>：紙幣・硬貨のこと。レジの中のお金や金庫のお金。</p>
+<p><strong>普通預金</strong>：銀行の普通預金口座の残高。</p>
+<p><strong>売掛金</strong>（うりかけきん）：商品やサービスを提供したが、まだ代金を受け取っていない状態。「ツケ」と同じ。後日、入金されたら売掛金が減って預金が増える。</p>
+<p><strong>棚卸資産</strong>（たなおろししさん）：まだ売れていない在庫商品のこと。期末に実際に数えて（棚卸して）金額を確定する。</p>
+<p><strong>前払費用</strong>：来期分の家賃や保険料を今期中に支払った場合、その「先払い分」を資産として計上する。来期になったら費用に振り替える。</p>
+<p><strong>建物・車両運搬具・土地</strong>：事業に使う固定資産。建物と車両は毎年少しずつ費用化（減価償却）するが、土地は価値が減らないので減価償却しない。</p>
+
+<h4>負債の勘定科目</h4>
+<p><strong>買掛金</strong>（かいかけきん）：商品を仕入れたが、まだ代金を支払っていない状態。売掛金の逆。</p>
+<p><strong>未払金</strong>：商品仕入以外の債務。備品を購入して後払いにした場合など。</p>
+<p><strong>預り金</strong>：従業員の給与から天引きした所得税や住民税。会社のお金ではなく、従業員から「預かっている」お金なので負債。後日、税務署や市区町村に納付する。</p>
+<p><strong>前受金</strong>：商品を提供する前にもらった手付金や前払い金。まだサービスを提供していないので、売上にはできない。提供後に売上に振り替える。</p>
+
+<h4>収益の勘定科目</h4>
+<p><strong>売上高</strong>：本業で稼いだ収入。最も基本的な収益科目。</p>
+<p><strong>受取利息</strong>：預金や貸付金から得られる利息収入。</p>
+<p><strong>雑収入</strong>：本業以外の小さな収入（自販機の設置手数料など）。</p>
+
+<h4>費用の勘定科目</h4>
+<p><strong>仕入高</strong>：販売目的で商品を購入したときの代金。</p>
+<p><strong>給料手当</strong>：従業員に支払う給与・手当の総額（社会保険料や税金を天引きする前の金額）。</p>
+<p><strong>法定福利費</strong>：会社が負担する社会保険料（健康保険・厚生年金・雇用保険・労災保険の事業主負担分）。</p>
+<p><strong>地代家賃</strong>：事務所や店舗の賃料。</p>
+<p><strong>水道光熱費</strong>：電気代・ガス代・水道代。</p>
+<p><strong>通信費</strong>：電話代、インターネット回線費、切手代。</p>
+<p><strong>旅費交通費</strong>：電車賃、タクシー代、出張時の宿泊費。</p>
+<p><strong>消耗品費</strong>：文房具、コピー用紙、10万円未満の備品。</p>
+<p><strong>減価償却費</strong>：建物や車両などの固定資産を、耐用年数に応じて少しずつ費用化したもの。実際にお金が出ていくわけではないが、資産の価値減少を費用として認識する。</p>
+<p><strong>支払利息</strong>：借入金に対して支払う利息。</p>
+<p><strong>租税公課</strong>（そぜいこうか）：事業に関する税金（印紙税、固定資産税、自動車税など）。ただし所得税と法人税はここに含めない。</p>
+</div>
+</details>
+
+<h3 id="sec1-3">1-3. 仕訳の実務：よくある10パターン</h3>
+<p><strong>仕訳（しわけ）</strong>とは、発生した取引を「借方（左）に何を、いくら」「貸方（右）に何を、いくら」と分解して記録する作業のことです。</p>
+
+<p>仕訳の考え方は、次の3ステップです。</p>
+<p><strong>ステップ1：</strong>この取引で「何が増えた」「何が減った」かを考える。</p>
+<p><strong>ステップ2：</strong>増減したものが5分類のどれに当たるかを判断する（資産？負債？費用？収益？純資産？）。</p>
+<p><strong>ステップ3：</strong>増加したものを正しい側に記入する。資産・費用の増加は借方（左）、負債・純資産・収益の増加は貸方（右）。減少はその逆。</p>
+
+<div class="box box-example">
+<div class="box-title">仕訳の思考プロセス（具体例）</div>
+<p>「事務所の家賃15万円を銀行振込で支払った」</p>
+<p>→ ステップ1：「家賃という費用が発生した」「普通預金が減った」</p>
+<p>→ ステップ2：家賃＝費用、普通預金＝資産</p>
+<p>→ ステップ3：費用の増加は借方（左）、資産の減少は貸方（右）</p>
+<p>→ 仕訳：（借方）地代家賃 150,000 ／（貸方）普通預金 150,000</p>
+</div>
+
+<p>以下に、実務で頻出する10パターンを示します。それぞれ「なぜそうなるか」を確認しながら読んでください。</p>
+
+<table>
+<tr><th>#</th><th>取引内容</th><th>借方（左）</th><th>貸方（右）</th></tr>
+<tr><td>1</td><td>商品を現金で売上</td><td>現金 100,000</td><td>売上高 100,000</td></tr>
+<tr><td>2</td><td>商品を掛けで仕入</td><td>仕入高 50,000</td><td>買掛金 50,000</td></tr>
+<tr><td>3</td><td>従業員に給与支払</td><td>給料手当 300,000</td><td>普通預金 253,000 / 預り金 47,000</td></tr>
+<tr><td>4</td><td>事務所家賃を振込</td><td>地代家賃 150,000</td><td>普通預金 150,000</td></tr>
+<tr><td>5</td><td>電気代を口座引落</td><td>水道光熱費 12,000</td><td>普通預金 12,000</td></tr>
+<tr><td>6</td><td>電車代を現金払い</td><td>旅費交通費 1,200</td><td>現金 1,200</td></tr>
+<tr><td>7</td><td>建物の減価償却</td><td>減価償却費 500,000</td><td>建物 500,000</td></tr>
+<tr><td>8</td><td>売掛金を回収</td><td>普通預金 80,000</td><td>売掛金 80,000</td></tr>
+<tr><td>9</td><td>銀行から借入</td><td>普通預金 5,000,000</td><td>長期借入金 5,000,000</td></tr>
+<tr><td>10</td><td>借入金を返済</td><td>長期借入金 100,000 / 支払利息 5,000</td><td>普通預金 105,000</td></tr>
+</table>
+
+<h3 id="sec1-4">1-4. 帳簿の種類</h3>
+<details>
+<summary>主要簿と補助簿の一覧</summary>
+<div class="inner">
+<p><strong>主要簿</strong>（必ず作成するもの）：</p>
+<p>(1) <strong>仕訳帳</strong>：すべての取引を発生順に記録する帳簿。日付・勘定科目・金額・摘要を記入する。</p>
+<p>(2) <strong>総勘定元帳</strong>（そうかんじょうもとちょう）：仕訳帳の内容を勘定科目ごとに集計した帳簿。科目別の残高がわかる。</p>
+<p><strong>補助簿</strong>（必要に応じて作成）：</p>
+<p>現金出納帳（現金の入出金記録）、預金出納帳、売掛金元帳（得意先別の売掛残高）、買掛金元帳、固定資産台帳（資産ごとの取得価額・減価償却を管理）、手形記入帳。</p>
+</div>
+</details>
+
+<h3 id="sec1-5">1-5. 試算表の作成ステップ</h3>
+<div class="box box-accent">
+<div class="box-title">試算表（しさんひょう）を作る手順</div>
+<p><strong>ステップ1：</strong> 総勘定元帳の各勘定科目について、借方合計と貸方合計をそれぞれ集計する。</p>
+<p><strong>ステップ2：</strong> 合計試算表を作成する。全科目の借方合計と貸方合計を一覧にし、借方総合計＝貸方総合計になることを確認する（一致しなければ記帳ミスがある）。</p>
+<p><strong>ステップ3：</strong> 残高試算表を作成する。各科目の借方合計と貸方合計の差額（残高）を算出する。資産・費用は借方残高、負債・純資産・収益は貸方残高になる。</p>
+</div>
+
+<h3 id="sec1-6">1-6. 決算整理仕訳</h3>
+<p>期末に帳簿の数字を実態に合わせるための修正仕訳です。これを行わないと正確な財務諸表が作れません。</p>
+
+<table>
+<tr><th>項目</th><th>内容</th><th>仕訳例</th></tr>
+<tr><td>減価償却</td><td>固定資産の価値減少を費用化</td><td>借）減価償却費 / 貸）減価償却累計額</td></tr>
+<tr><td>貸倒引当金</td><td>回収不能の見積額を計上</td><td>借）貸倒引当金繰入 / 貸）貸倒引当金</td></tr>
+<tr><td>経過勘定</td><td>前払・未払・前受・未収の調整</td><td>借）前払費用 / 貸）支払保険料</td></tr>
+<tr><td>棚卸</td><td>在庫の実地確認と帳簿修正</td><td>借）繰越商品 / 貸）仕入（期末在庫分）</td></tr>
+</table>
+
+<!-- ========== 第2部 ========== -->
+<h2 id="sec2-1">第2部：財務諸表の作成実務</h2>
+
+<p>財務諸表（ざいむしょひょう）とは、会社の経営成績や財政状態をまとめた公式な書類です。「会社の健康診断書」と考えてください。主に3つの書類があり、これを<strong>財務三表</strong>と呼びます。損益計算書（PL）、貸借対照表（BS）、キャッシュ・フロー計算書（CF）です。この3つは互いにつながっており、一体で読むことで会社の全体像がわかります。</p>
+
+<h3>2-1. 損益計算書（PL）の作り方：5段階利益</h3>
+<p><strong>損益計算書（そんえきけいさんしょ）</strong>は英語でProfit and Loss Statement、略してPLと呼びます。「一定期間（通常1年間）に、いくら稼いで、いくら使って、最終的にいくら残ったか」を示す書類です。</p>
+
+<p>PLの最大のポイントは、利益を<strong>5段階</strong>に分けて計算することです。なぜ5段階に分けるかというと、「本業で儲かっているのか」「本業以外で損をしていないか」「突発的な損益はあったか」を区別して見るためです。</p>
+
+<div class="box box-example">
+<div class="box-title">5段階利益の計算プロセス</div>
+<p>(1) <strong>売上総利益（うりあげそうりえき）</strong> = 売上高 - 売上原価</p>
+<p>→ 「粗利（あらり）」とも呼ぶ。商品そのもので稼いだ利益。売上原価とは、売れた商品の仕入れ値のこと。</p>
+<p>(2) <strong>営業利益（えいぎょうりえき）</strong> = 売上総利益 - 販売費及び一般管理費</p>
+<p>→ 本業で稼いだ利益。販管費には給料、家賃、広告費、減価償却費など、商品原価以外の事業運営コストがすべて含まれる。この数字がマイナスなら「本業で赤字」という深刻な状態。</p>
+<p>(3) <strong>経常利益（けいじょうりえき）</strong> = 営業利益 + 営業外収益 - 営業外費用</p>
+<p>→ 本業＋金融活動を合わせた利益。営業外収益は受取利息や受取配当金。営業外費用は支払利息や為替差損。銀行からの借入が多い会社は、ここで利益が大きく減ることがある。</p>
+<p>(4) <strong>税引前当期純利益</strong> = 経常利益 + 特別利益 - 特別損失</p>
+<p>→ 毎年は起きない臨時の損益を加味した利益。特別利益は固定資産売却益など。特別損失は災害損失、リストラ費用など。</p>
+<p>(5) <strong>当期純利益（とうきじゅんりえき）</strong> = 税引前当期純利益 - 法人税等</p>
+<p>→ 最終的に会社の手元に残る利益。これがBSの利益剰余金に加算され、会社の蓄えになる。</p>
+</div>
+
+<h3 id="sec2-2">2-2. 貸借対照表（BS）の作り方</h3>
+<p><strong>貸借対照表（たいしゃくたいしょうひょう）</strong>は英語でBalance Sheet、略してBSと呼びます。PLが「1年間の成績」なら、BSは「ある一瞬の財産の写真」です。決算日（たとえば3月31日）時点で、会社が「何を持っていて」「いくら借りていて」「差し引きの自分の取り分はいくらか」を一覧にした書類です。</p>
+
+<p>BSの最も重要なルールは<strong>「資産 = 負債 + 純資産」</strong>という等式が必ず成り立つことです。左側（資産）と右側（負債＋純資産）が必ず同じ金額になるので「バランスシート」と呼ばれます。</p>
+
+<p>資産と負債はそれぞれ「流動」と「固定」に区分します。<strong>流動</strong>とは「1年以内に現金化できる（または支払期限が来る）もの」、<strong>固定</strong>とは「1年を超えて使い続ける（または支払期限が1年超先の）もの」です。この区分は、会社の短期的な支払い能力を判断するために重要です。</p>
+
+<table>
+<tr><th colspan="2">資産の部（左側）</th><th colspan="2">負債・純資産の部（右側）</th></tr>
+<tr><td colspan="2"><strong>流動資産</strong>（1年以内に現金化）</td><td colspan="2"><strong>流動負債</strong>（1年以内に支払）</td></tr>
+<tr><td>現金・預金、売掛金、棚卸資産</td><td></td><td>買掛金、短期借入金、未払金</td><td></td></tr>
+<tr><td colspan="2"><strong>固定資産</strong>（1年超使用）</td><td colspan="2"><strong>固定負債</strong>（1年超後に支払）</td></tr>
+<tr><td>建物、車両、土地、ソフトウェア</td><td></td><td>長期借入金、社債</td><td></td></tr>
+<tr><td colspan="2"></td><td colspan="2"><strong>純資産</strong></td></tr>
+<tr><td colspan="2"></td><td>資本金、利益剰余金</td><td></td></tr>
+</table>
+
+<h3 id="sec2-3">2-3. キャッシュ・フロー計算書（CF）</h3>
+<details>
+<summary>直接法と間接法の違い</summary>
+<div class="inner">
+<p><strong>直接法</strong>：営業活動の現金収入・支出を直接集計する方法。わかりやすいが手間がかかる。</p>
+<p><strong>間接法</strong>（実務で主流）：税引前当期純利益から出発し、非資金項目（減価償却費など）や運転資本の増減を加減して営業CFを算出する。</p>
+<p>間接法の計算式：営業CF = 税引前当期純利益 + 減価償却費 - 売掛金増加 + 買掛金増加 - 棚卸資産増加 ...</p>
+</div>
+</details>
+
+<h3 id="sec2-4">2-4. 数値例で3表作成</h3>
+<div class="box box-example">
+<div class="box-title">株式会社サンプル（2025年度）</div>
+<table>
+<tr><th>PL項目</th><th>金額</th><th></th><th>BS項目</th><th>金額</th></tr>
+<tr><td>売上高</td><td>50,000千円</td><td></td><td>現金・預金</td><td>8,000千円</td></tr>
+<tr><td>売上原価</td><td>30,000千円</td><td></td><td>売掛金</td><td>6,000千円</td></tr>
+<tr><td>売上総利益</td><td>20,000千円</td><td></td><td>棚卸資産</td><td>4,000千円</td></tr>
+<tr><td>販管費</td><td>14,000千円</td><td></td><td>固定資産</td><td>12,000千円</td></tr>
+<tr><td>営業利益</td><td>6,000千円</td><td></td><td>資産合計</td><td>30,000千円</td></tr>
+<tr><td>経常利益</td><td>5,800千円</td><td></td><td>買掛金</td><td>5,000千円</td></tr>
+<tr><td>税引前利益</td><td>5,800千円</td><td></td><td>借入金</td><td>10,000千円</td></tr>
+<tr><td>法人税等</td><td>1,740千円</td><td></td><td>資本金</td><td>10,000千円</td></tr>
+<tr><td>当期純利益</td><td>4,060千円</td><td></td><td>利益剰余金</td><td>5,000千円</td></tr>
+</table>
+<p>営業CF：当期純利益4,060 + 減価償却費2,000 - 売掛金増加500 + 買掛金増加300 = <strong>5,860千円</strong></p>
+</div>
+
+<!-- 決算プロセス SVG -->
+<div class="chart-container">
+<svg viewBox="0 0 720 120" width="720" height="120">
+  <text x="360" y="20" text-anchor="middle" font-size="13" fill="#3a5a7a" font-weight="bold">決算プロセス全体図</text>
+  <rect x="5" y="40" width="100" height="45" rx="5" fill="#3a5a7a"/><text x="55" y="67" text-anchor="middle" font-size="11" fill="#fff">日常仕訳</text>
+  <line x1="105" y1="62" x2="125" y2="62" stroke="#3a5a7a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="130" y="40" width="100" height="45" rx="5" fill="#3a5a7a"/><text x="180" y="67" text-anchor="middle" font-size="11" fill="#fff">試算表作成</text>
+  <line x1="230" y1="62" x2="250" y2="62" stroke="#3a5a7a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="255" y="40" width="100" height="45" rx="5" fill="#4a7090"/><text x="305" y="67" text-anchor="middle" font-size="11" fill="#fff">決算整理仕訳</text>
+  <line x1="355" y1="62" x2="375" y2="62" stroke="#3a5a7a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="380" y="40" width="100" height="45" rx="5" fill="#4a7090"/><text x="430" y="67" text-anchor="middle" font-size="11" fill="#fff">精算表</text>
+  <line x1="480" y1="62" x2="500" y2="62" stroke="#3a5a7a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="505" y="40" width="100" height="45" rx="5" fill="#2d2a26"/><text x="555" y="67" text-anchor="middle" font-size="11" fill="#fff">財務諸表</text>
+  <line x1="605" y1="62" x2="625" y2="62" stroke="#3a5a7a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="630" y="40" width="80" height="45" rx="5" fill="#2d2a26"/><text x="670" y="67" text-anchor="middle" font-size="11" fill="#fff">税務申告</text>
+</svg>
+</div>
+
+<!-- ========== 第3部 ========== -->
+<h2 id="sec3-1">第3部：税務申告の実務</h2>
+
+<p>税務申告とは、「自分の所得（もうけ）がいくらだったかを計算して、税務署に届け出て、税金を納める」一連の手続きのことです。日本の税制は「申告納税制度」を採用しており、これは「国が税額を決めて通知する」のではなく、「納税者自身が計算して申告する」という仕組みです。つまり、正しく計算する責任は自分にあります。間違えれば追加で税金を取られ（加算税）、悪質な場合は罰金（重加算税）や刑事罰もあります。</p>
+
+<p>この第3部では、個人事業主と法人のそれぞれについて、実務で必要な申告手続きをすべて解説します。</p>
+
+<h3>3-1. 確定申告の手順</h3>
+
+<div class="box box-accent">
+<div class="box-title">確定申告の流れ（個人事業主の場合）</div>
+<p><strong>対象期間：</strong>1月1日～12月31日の所得について、翌年2月16日～3月15日に申告。</p>
+<p><strong>ステップ1：</strong> 1年間の帳簿を締め、収入金額と必要経費を集計する。</p>
+<p><strong>ステップ2：</strong> 必要書類を準備する。確定申告書、青色申告決算書（または収支内訳書）、源泉徴収票、控除証明書（生命保険・社会保険など）、マイナンバーカード。</p>
+<p><strong>ステップ3：</strong> 申告書を作成する。国税庁「確定申告書等作成コーナー」またはe-Taxソフトで入力。</p>
+<p><strong>ステップ4：</strong> 提出する。e-Tax（電子申告）、郵送、または税務署窓口。e-TaxならマイナンバーカードとスマートフォンまたはICカードリーダーが必要。</p>
+<p><strong>ステップ5：</strong> 納税する。口座振替、クレジットカード、コンビニ、またはQRコード決済。振替納税の場合、口座引落は4月中旬。</p>
+</div>
+
+<!-- 税務申告フロー SVG -->
+<div class="chart-container">
+<svg viewBox="0 0 700 200" width="700" height="200">
+  <text x="350" y="20" text-anchor="middle" font-size="13" fill="#3a5a7a" font-weight="bold">税務申告フロー</text>
+  <rect x="20" y="40" width="130" height="40" rx="5" fill="#3a5a7a"/><text x="85" y="64" text-anchor="middle" font-size="11" fill="#fff">帳簿の締め(12月)</text>
+  <line x1="150" y1="60" x2="175" y2="60" stroke="#3a5a7a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="180" y="40" width="130" height="40" rx="5" fill="#3a5a7a"/><text x="245" y="64" text-anchor="middle" font-size="11" fill="#fff">書類準備(1月)</text>
+  <line x1="310" y1="60" x2="335" y2="60" stroke="#3a5a7a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="340" y="40" width="130" height="40" rx="5" fill="#4a7090"/><text x="405" y="64" text-anchor="middle" font-size="11" fill="#fff">申告書作成(2月)</text>
+  <line x1="470" y1="60" x2="495" y2="60" stroke="#3a5a7a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="500" y="40" width="130" height="40" rx="5" fill="#2d2a26"/><text x="565" y="64" text-anchor="middle" font-size="11" fill="#fff">提出・納税(3/15)</text>
+  <!-- 分岐 -->
+  <rect x="180" y="120" width="130" height="40" rx="5" fill="#b8860b"/><text x="245" y="144" text-anchor="middle" font-size="11" fill="#fff">青色：決算書作成</text>
+  <rect x="340" y="120" width="130" height="40" rx="5" fill="#b8860b"/><text x="405" y="144" text-anchor="middle" font-size="11" fill="#fff">消費税：別途申告</text>
+  <line x1="245" y1="80" x2="245" y2="118" stroke="#b8860b" stroke-width="1.5" stroke-dasharray="4" marker-end="url(#arrow)"/>
+  <line x1="405" y1="80" x2="405" y2="118" stroke="#b8860b" stroke-width="1.5" stroke-dasharray="4" marker-end="url(#arrow)"/>
+</svg>
+</div>
+
+<h3 id="sec3-2">3-2. 青色申告</h3>
+<div class="box box-accent">
+<div class="box-title">青色申告65万円控除の要件（2025-2026年）</div>
+<p>(1) 事前に「青色申告承認申請書」を税務署に提出（開業から2か月以内、または適用年の3月15日まで）。</p>
+<p>(2) 複式簿記で記帳すること。</p>
+<p>(3) 貸借対照表と損益計算書を確定申告書に添付すること。</p>
+<p>(4) e-Taxで提出、または電子帳簿保存を行うこと（これがないと控除額は55万円に減額）。</p>
+<p>(5) 期限内に申告すること（期限後申告は10万円控除に減額）。</p>
+</div>
+
+<h3 id="sec3-3">3-3. 消費税申告</h3>
+<p><strong>消費税</strong>は、商品やサービスを買うときに消費者が支払う税金（税率10%、食品は8%）ですが、実際に国に納めるのは事業者です。事業者は「お客さんから預かった消費税」から「仕入先に支払った消費税」を差し引いた差額を国に納付します。</p>
+
+<p><strong>課税事業者の判定</strong>：すべての事業者が消費税を申告するわけではありません。以下の条件に該当する場合に「課税事業者」となり、消費税の申告・納付義務が生じます。</p>
+<p>(1) <strong>基準期間</strong>（個人：2年前、法人：2事業年度前）の課税売上高が<strong>1,000万円超</strong>。</p>
+<p>(2) または、<strong>特定期間</strong>（個人：前年1月〜6月、法人：前事業年度の上半期）の課税売上高が<strong>1,000万円超</strong>。</p>
+<p>(3) または、<strong>インボイス発行事業者</strong>として登録した場合（売上が1,000万円以下でも登録すれば課税事業者になる）。</p>
+
+<table>
+<tr><th>項目</th><th>本則課税</th><th>簡易課税</th></tr>
+<tr><td>計算方法</td><td>預かった消費税 - 支払った消費税</td><td>預かった消費税 × (1 - みなし仕入率)</td></tr>
+<tr><td>適用条件</td><td>制限なし</td><td>基準期間の課税売上高5,000万円以下 + 届出</td></tr>
+<tr><td>メリット</td><td>実際の経費が多い場合に有利</td><td>計算が簡単、仕入が少ない業種に有利</td></tr>
+</table>
+
+<div class="box box-warn">
+<div class="box-title">インボイス制度（2023年10月～）</div>
+<p>適格請求書（インボイス）を発行できるのは登録を受けた課税事業者のみ。免税事業者からの仕入は原則として仕入税額控除不可（経過措置：2026年9月まで80%控除可、2029年9月まで50%控除可）。登録番号は「T + 法人番号（13桁）」または「T + 13桁の番号（個人）」。</p>
+</div>
+
+<h3 id="sec3-4">3-4. 法人税申告の基礎</h3>
+<details>
+<summary>法人税の計算プロセスと主要別表</summary>
+<div class="inner">
+<p><strong>計算の流れ：</strong>会計上の利益（税引前当期純利益） → 税務上の加算・減算調整 → 課税所得 → 税率適用 → 法人税額</p>
+<p><strong>2025-2026年の法人税率：</strong>資本金1億円以下の中小法人は、年800万円以下の部分が15%、800万円超の部分が23.2%。</p>
+<p><strong>主要な別表：</strong></p>
+<p>別表一：法人税額の計算 / 別表四：所得の金額の計算（加算・減算） / 別表五(一)：利益積立金の計算 / 別表五(二)：租税公課の納付状況 / 別表十五：交際費の損金算入限度額</p>
+<p><strong>申告期限：</strong>事業年度終了日の翌日から2か月以内。届出により1か月延長可。</p>
+</div>
+</details>
+
+<h3 id="sec3-5">3-5. 源泉徴収と年末調整</h3>
+<p><strong>源泉徴収</strong>とは、給与や報酬を支払う際に、所得税を天引き（差し引いて）して、会社が本人に代わって国に納付する制度です。</p>
+<table>
+<tr><th>支払種類</th><th>源泉徴収税率</th><th>納付期限</th></tr>
+<tr><td>給与（甲欄）</td><td>税額表による</td><td>翌月10日（納特は年2回：7/10、1/20）</td></tr>
+<tr><td>賞与</td><td>前月給与から算出した率</td><td>翌月10日</td></tr>
+<tr><td>報酬（士業等）</td><td>10.21%（100万円超は20.42%）</td><td>翌月10日</td></tr>
+</table>
+<p><strong>年末調整</strong>：12月の給与支払時に、1年間の源泉徴収税額と正しい年税額の過不足を精算する手続き。扶養控除等申告書、保険料控除申告書、住宅ローン控除申告書を回収して計算する。</p>
+
+<h3 id="sec3-6">3-6. 社会保険の実務</h3>
+<table>
+<tr><th>制度</th><th>対象</th><th>保険料率（2025年度目安）</th><th>負担</th></tr>
+<tr><td>健康保険</td><td>法人の従業員</td><td>約10%（都道府県で異なる）</td><td>労使折半</td></tr>
+<tr><td>厚生年金</td><td>法人の従業員</td><td>18.3%</td><td>労使折半</td></tr>
+<tr><td>雇用保険</td><td>週20時間以上勤務</td><td>1.55%（一般事業）</td><td>事業主0.95% / 被保険者0.6%</td></tr>
+<tr><td>労災保険</td><td>全従業員</td><td>業種により0.25%～8.8%</td><td>全額事業主負担</td></tr>
+</table>
+
+<!-- ========== 第4部 ========== -->
+<h2 id="sec4-1">第4部：経理実務フロー</h2>
+
+<p>経理の仕事は「日次」「月次」「年次」の3つのサイクルで回っています。日次業務は毎日の記録、月次業務は1か月ごとの集計と確認、年次業務は1年間の総まとめです。この3つのサイクルを確実にこなすことが、正確な決算と税務申告の基盤になります。</p>
+
+<p>以下、それぞれのサイクルで「何を」「なぜ」「どうやるか」を解説します。</p>
+
+<!-- 経理サイクル SVG -->
+<div class="chart-container">
+<svg viewBox="0 0 500 280" width="500" height="280">
+  <text x="250" y="25" text-anchor="middle" font-size="14" fill="#3a5a7a" font-weight="bold">経理業務サイクル</text>
+  <!-- 日次 -->
+  <circle cx="250" cy="155" r="40" fill="#3a5a7a" opacity=".15" stroke="#3a5a7a" stroke-width="2"/>
+  <text x="250" y="152" text-anchor="middle" font-size="12" fill="#3a5a7a" font-weight="bold">日次</text>
+  <text x="250" y="166" text-anchor="middle" font-size="9" fill="#4a4540">記帳・現金管理</text>
+  <!-- 月次 -->
+  <circle cx="250" cy="155" r="85" fill="none" stroke="#4a7090" stroke-width="2" stroke-dasharray="6"/>
+  <text x="250" y="62" text-anchor="middle" font-size="12" fill="#4a7090" font-weight="bold">月次：月次決算・給与計算</text>
+  <!-- 年次 -->
+  <circle cx="250" cy="155" r="120" fill="none" stroke="#2d2a26" stroke-width="2" stroke-dasharray="10"/>
+  <text x="250" y="270" text-anchor="middle" font-size="12" fill="#2d2a26" font-weight="bold">年次：決算・税務申告・棚卸</text>
+</svg>
+</div>
+
+<h3>4-1. 日次業務</h3>
+<p>(1) <strong>現金管理</strong>：毎日の営業終了後、手元現金を実際に数え（実査）、帳簿残高と一致するか確認する。差異があれば「現金過不足」勘定で処理。</p>
+<p>(2) <strong>領収書・請求書の整理</strong>：受領した領収書に日付・金額・取引先・内容を確認し、ファイリングする。電子帳簿保存法の要件を満たすスキャン保存も可。</p>
+<p>(3) <strong>仕訳入力</strong>：当日発生した取引を会計ソフトに入力する。後回しにするとミスが増えるため、当日中が理想。</p>
+
+<h3 id="sec4-2">4-2. 月次業務</h3>
+<p>(1) <strong>月次決算</strong>：月末に試算表を作成し、売上・経費の推移を確認する。予算との差異分析を行い、経営者に報告する。</p>
+<p>(2) <strong>残高照合</strong>：預金通帳と帳簿の残高を照合する。売掛金・買掛金の残高を取引先と確認する。</p>
+<p>(3) <strong>給与計算</strong>：勤怠データを集計 → 総支給額を計算 → 社会保険料・所得税・住民税を控除 → 差引支給額を算出 → 振込処理。</p>
+<p>(4) <strong>源泉所得税の納付</strong>：翌月10日まで（納期の特例を受けている場合は年2回）。</p>
+
+<h3 id="sec4-3">4-3. 年次業務</h3>
+<p><strong>決算スケジュール（3月決算の場合）：</strong></p>
+<table>
+<tr><th>時期</th><th>作業内容</th></tr>
+<tr><td>3月末</td><td>期末棚卸の実施、固定資産の実査</td></tr>
+<tr><td>4月上旬</td><td>決算整理仕訳の入力、経過勘定の計上</td></tr>
+<tr><td>4月中旬</td><td>財務諸表の作成、税理士との確認</td></tr>
+<tr><td>5月末</td><td>法人税・消費税・地方税の申告と納付</td></tr>
+<tr><td>6月</td><td>株主総会（会社法上の義務）</td></tr>
+</table>
+
+<h3 id="sec4-4">4-4. 会計ソフト比較</h3>
+<table>
+<tr><th>ソフト</th><th>月額（税抜）</th><th>特徴</th><th>向いている人</th></tr>
+<tr><td>freee</td><td>980円～</td><td>銀行・クレカ自動連携、UIが直感的、簿記知識少なくても使える</td><td>初心者・スタートアップ</td></tr>
+<tr><td>マネーフォワード</td><td>800円～</td><td>仕訳形式で入力、他サービス連携豊富、APIが充実</td><td>簿記知識がある人</td></tr>
+<tr><td>弥生</td><td>無料～</td><td>国内シェアNo.1、サポートが手厚い、デスクトップ版もあり</td><td>税理士と連携する人</td></tr>
+</table>
+
+<!-- ========== 第5部 ========== -->
+<h2 id="sec5-1">第5部：実務の財務分析</h2>
+
+<p>財務分析とは、財務諸表の数字を使って「この会社は健全か」「儲かっているか」「お金の使い方は効率的か」を判断する技術です。数字を見るだけでは意味がわかりません。数字を「指標（しひょう）」に変換し、業界平均や過去の数値と比較することで、初めて意味のある情報になります。</p>
+
+<p>財務分析は大きく4つの視点で行います。<strong>収益性</strong>（どれだけ効率よく稼いでいるか）、<strong>安全性</strong>（借金を返す力があるか）、<strong>効率性</strong>（資産をうまく活用しているか）、<strong>成長性</strong>（売上や利益が伸びているか）です。</p>
+
+<h3>5-1. 収益性分析</h3>
+
+<div class="box box-accent">
+<div class="box-title">ROEデュポン分解</div>
+<p>ROE（自己資本利益率）は3つの要素に分解して原因分析ができます。</p>
+<p><strong>ROE = 純利益率 × 総資産回転率 × 財務レバレッジ</strong></p>
+<p>= (当期純利益/売上高) × (売上高/総資産) × (総資産/自己資本)</p>
+<p><strong>数値例：</strong>純利益4,060千円 / 売上50,000千円 × 売上50,000千円 / 総資産30,000千円 × 総資産30,000千円 / 自己資本15,000千円</p>
+<p>= 8.12% × 1.67回 × 2.0倍 = <strong>ROE 27.1%</strong></p>
+</div>
+
+<p><strong>営業利益率</strong> = 営業利益 / 売上高 × 100。業種平均と比較する。上記例では6,000/50,000 = 12.0%。</p>
+<p><strong>ROIC</strong>（投下資本利益率）= NOPAT（税引後営業利益）/ 投下資本。株主と債権者の両方から見た効率性を測る指標。WACC（加重平均資本コスト）を上回っていれば価値創造している。</p>
+
+<h3 id="sec5-2">5-2. 安全性分析</h3>
+<p>安全性分析は「この会社は借金を返せるか」「突然の支払いに耐えられるか」を判断する分析です。いくら利益が出ていても、短期的な支払い能力がなければ倒産します。</p>
+<table>
+<tr><th>指標</th><th>計算式</th><th>目安</th><th>数値例</th></tr>
+<tr><td>流動比率</td><td>流動資産 / 流動負債 × 100</td><td>200%以上が理想</td><td>18,000/5,000 = 360%</td></tr>
+<tr><td>当座比率</td><td>当座資産 / 流動負債 × 100</td><td>100%以上</td><td>14,000/5,000 = 280%</td></tr>
+<tr><td>自己資本比率</td><td>自己資本 / 総資産 × 100</td><td>40%以上</td><td>15,000/30,000 = 50%</td></tr>
+<tr><td>D/Eレシオ</td><td>有利子負債 / 自己資本</td><td>1.0倍以下</td><td>10,000/15,000 = 0.67倍</td></tr>
+</table>
+
+<h3 id="sec5-3">5-3. 効率性分析と資金繰り</h3>
+<p><strong>CCC（キャッシュ・コンバージョン・サイクル）</strong>＝商品を仕入れてから、販売して現金を回収するまでの日数。短いほど資金効率が良い。</p>
+<div class="box box-example">
+<div class="box-title">CCC計算例</div>
+<p>売上債権回転日数 = 売掛金6,000 / (売上50,000/365) = <strong>43.8日</strong></p>
+<p>棚卸資産回転日数 = 棚卸資産4,000 / (売上原価30,000/365) = <strong>48.7日</strong></p>
+<p>仕入債務回転日数 = 買掛金5,000 / (売上原価30,000/365) = <strong>60.8日</strong></p>
+<p>CCC = 43.8 + 48.7 - 60.8 = <strong>31.7日</strong></p>
+</div>
+
+<p><strong>資金繰り表の作成</strong>：月ごとに「前月繰越 + 当月入金 - 当月出金 = 翌月繰越」を一覧にした表。経常収支（売上入金-仕入支払-経費）と経常外収支（借入-返済）に区分して作成する。月末残高がマイナスになる月があれば、事前に融資や入金促進の対策が必要。</p>
+
+<!-- ========== 第6部 ========== -->
+<h2 id="sec6-1">第6部：チェックリストと年間カレンダー</h2>
+
+<p>実務では「やるべきことを漏れなくやる」ことが最も重要です。申告期限を1日でも過ぎれば加算税が発生し、届出を忘れれば本来受けられるはずの控除を逃すこともあります。この第6部では、実務で使えるチェックリストとカレンダーをまとめました。印刷して壁に貼っておくことをおすすめします。</p>
+
+<h3>6-1. 税務カレンダー（月別）</h3>
+<p>以下は、個人事業主・法人の経理担当者が毎月確認すべき主要な税務スケジュールです。</p>
+<table>
+<tr><th>月</th><th>主な届出・納付</th></tr>
+<tr><td>1月</td><td>源泉所得税納付（納特：7-12月分、1/20まで）、法定調書提出（1/31）、給与支払報告書提出</td></tr>
+<tr><td>2月</td><td>確定申告開始（2/16～）</td></tr>
+<tr><td>3月</td><td>確定申告期限（3/15）、個人消費税申告期限（3/31）</td></tr>
+<tr><td>4月</td><td>振替納税日（所得税4月中旬）、固定資産税第1期</td></tr>
+<tr><td>5月</td><td>3月決算法人の法人税・消費税申告（5/31）、自動車税</td></tr>
+<tr><td>6月</td><td>住民税特別徴収開始（新年度額）、個人住民税第1期</td></tr>
+<tr><td>7月</td><td>源泉所得税納付（納特：1-6月分、7/10まで）、社会保険算定基届（7/10）</td></tr>
+<tr><td>8-9月</td><td>個人住民税第2期(8月)、個人事業税第1期(8月)</td></tr>
+<tr><td>10月</td><td>社会保険新等級適用</td></tr>
+<tr><td>11月</td><td>個人住民税第3期、個人事業税第2期</td></tr>
+<tr><td>12月</td><td>年末調整、固定資産税第4期</td></tr>
+</table>
+
+<h3 id="sec6-2">6-2. 決算チェックリスト</h3>
+<div class="box box-accent">
+<div class="box-title">決算時の確認項目</div>
+<p>[ ] 現金実査（帳簿残高と実際残高の一致確認）</p>
+<p>[ ] 預金残高照合（通帳・ネットバンキングと帳簿の一致）</p>
+<p>[ ] 売掛金の回収可能性確認（貸倒引当金の要否判断）</p>
+<p>[ ] 棚卸資産の実地棚卸（帳簿との差異調整）</p>
+<p>[ ] 固定資産の減価償却計算（耐用年数・償却方法の確認）</p>
+<p>[ ] 経過勘定の計上（前払費用・未払費用・前受収益・未収収益）</p>
+<p>[ ] 仮払金・仮受金の精算（期末に残高ゼロにする）</p>
+<p>[ ] 消費税の税区分確認（課税・非課税・不課税の区分）</p>
+<p>[ ] 試算表の貸借一致確認</p>
+<p>[ ] 前期比較での異常値チェック</p>
+</div>
+
+<h3 id="sec6-3">6-3. 届出一覧と法人設立ステップ</h3>
+<details>
+<summary>個人事業の開業届出一覧</summary>
+<div class="inner">
+<table>
+<tr><th>届出書</th><th>提出先</th><th>期限</th></tr>
+<tr><td>個人事業の開業届出書</td><td>所轄税務署</td><td>開業から1か月以内</td></tr>
+<tr><td>青色申告承認申請書</td><td>所轄税務署</td><td>開業から2か月以内</td></tr>
+<tr><td>給与支払事務所等の開設届出書</td><td>所轄税務署</td><td>従業員雇用から1か月以内</td></tr>
+<tr><td>源泉所得税の納期の特例承認申請書</td><td>所轄税務署</td><td>随時（従業員10人未満）</td></tr>
+<tr><td>事業開始届</td><td>都道府県税事務所</td><td>開業から15日以内（自治体による）</td></tr>
+</table>
+</div>
+</details>
+
+<details>
+<summary>法人設立の主要ステップ</summary>
+<div class="inner">
+<p><strong>ステップ1：</strong> 定款の作成と認証（公証役場）。電子定款なら収入印紙4万円が不要。</p>
+<p><strong>ステップ2：</strong> 資本金の払込み（発起人の個人口座に振込）。</p>
+<p><strong>ステップ3：</strong> 法務局で設立登記申請。登録免許税は株式会社15万円、合同会社6万円。</p>
+<p><strong>ステップ4：</strong> 登記完了後の届出。税務署（法人設立届出書、青色申告承認申請書、給与支払事務所開設届）、都道府県・市区町村（法人設立届）、年金事務所（社会保険新規適用届）、ハローワーク・労基署（雇用保険・労災保険）。</p>
+</div>
+</details>
+
+</div>
+
+<footer>
+  <p>&copy; LLC.Snipers All Rights Reserved.</p>
+</footer>
+
+<script>
+// Progress bar
+window.addEventListener('scroll',function(){
+  const h=document.documentElement;
+  const pct=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100;
+  document.getElementById('progress-bar').style.width=pct+'%';
+});
+
+// Sidebar active link highlighting
+const sections=document.querySelectorAll('h2[id],h3[id]');
+const navLinks=document.querySelectorAll('#sidebar a[href^="#"]');
+window.addEventListener('scroll',function(){
+  let current='';
+  sections.forEach(function(s){
+    if(window.scrollY>=s.offsetTop-100) current=s.id;
+  });
+  navLinks.forEach(function(a){
+    a.classList.remove('active');
+    if(a.getAttribute('href')==='#'+current) a.classList.add('active');
+  });
+});
+
+// Close sidebar on link click (mobile)
+navLinks.forEach(function(a){
+  a.addEventListener('click',function(){
+    if(window.innerWidth<=860) document.getElementById('sidebar').classList.remove('open');
+  });
+});
+</script>
+</body>
+</html>
