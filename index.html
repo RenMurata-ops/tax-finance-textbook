@@ -388,6 +388,7 @@ body::before {
   .card { padding: 24px 20px 20px; }
   .card .card-img { margin: 16px -20px -20px; min-height: 100px; }
   .footer .stats { flex-direction: column; gap: 16px; }
+  .goal-grid { grid-template-columns: 1fr !important; }
 }
 </style>
 </head>
@@ -448,6 +449,46 @@ body::before {
     <p>同じテーマを、3つのアプローチで学べます。<br>あなたに合ったバージョンを選んでください。</p>
   </div>
 
+  <!-- ゴールセクション -->
+  <div style="background:var(--surface);border:1px solid var(--border-light);border-radius:16px;padding:36px 32px;margin-bottom:48px;">
+    <h2 style="font-size:22px;font-weight:800;color:var(--text);margin-bottom:8px;letter-spacing:-0.01em;">本書のゴール</h2>
+    <p style="font-size:13px;color:var(--text-3);margin-bottom:20px;line-height:1.8;">この教科書を読み終えると、あなたは以下のレベルに到達します。</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;">
+      <div style="padding:16px;border-radius:10px;border:1px solid var(--border-light);background:var(--bg-light);">
+        <div style="font-size:12px;font-weight:700;color:var(--green);margin-bottom:6px;letter-spacing:0.05em;">LEVEL 1</div>
+        <div style="font-size:14px;font-weight:700;color:var(--text);margin-bottom:4px;">税務の「構造」を完全に理解する</div>
+        <div style="font-size:12.5px;color:var(--text-3);line-height:1.7;">税理士に丸投げではなく、自分で節税スキームを設計・指示できるようになる</div>
+      </div>
+      <div style="padding:16px;border-radius:10px;border:1px solid var(--border-light);background:var(--bg-light);">
+        <div style="font-size:12px;font-weight:700;color:var(--brown);margin-bottom:6px;letter-spacing:0.05em;">LEVEL 2</div>
+        <div style="font-size:14px;font-weight:700;color:var(--text);margin-bottom:4px;">合法的な「税の最適化スキーム」を構築する</div>
+        <div style="font-size:12.5px;color:var(--text-3);line-height:1.7;">役員報酬設計・法人個人の所得分散・経費戦略など、専門家レベルの手法を実装する</div>
+      </div>
+      <div style="padding:16px;border-radius:10px;border:1px solid var(--border-light);background:var(--bg-light);">
+        <div style="font-size:12px;font-weight:700;color:var(--blue);margin-bottom:6px;letter-spacing:0.05em;">LEVEL 3</div>
+        <div style="font-size:14px;font-weight:700;color:var(--text);margin-bottom:4px;">第一線の経営戦略を実行できる</div>
+        <div style="font-size:12.5px;color:var(--text-3);line-height:1.7;">ハーバードMBAレベルのUnit Economics・ROIC経営・プラットフォーム戦略を自社に適用する</div>
+      </div>
+      <div style="padding:16px;border-radius:10px;border:1px solid var(--border-light);background:var(--bg-light);">
+        <div style="font-size:12px;font-weight:700;color:var(--text-2);margin-bottom:6px;letter-spacing:0.05em;">LEVEL 4</div>
+        <div style="font-size:14px;font-weight:700;color:var(--text);margin-bottom:4px;">CFO視点で経営を設計する</div>
+        <div style="font-size:12.5px;color:var(--text-3);line-height:1.7;">資金調達・企業価値評価・M&Aまで含めた財務戦略をゼロから組み立てられる</div>
+      </div>
+    </div>
+    <div style="background:linear-gradient(135deg,#3d6b4f08,#7a5c3a08);border:1px solid var(--border);border-radius:10px;padding:20px 24px;">
+      <div style="font-size:14px;font-weight:700;color:var(--text);margin-bottom:8px;">具体的な節税インパクト</div>
+      <div style="font-size:13px;color:var(--text-2);line-height:1.9;">
+        年商3,000万円の事業者が税理士に丸投げした場合、平均して<strong style="color:var(--green);font-size:15px;">年間120〜250万円</strong>の税金を余分に支払っています。<br>
+        本書で学ぶ最適化スキームを適用すると：<br>
+        <span style="margin-left:12px;">・役員報酬の最適設計 → 約40〜80万円の削減</span><br>
+        <span style="margin-left:12px;">・法人・個人の所得分散 → 約30〜60万円の削減</span><br>
+        <span style="margin-left:12px;">・経費計上の最適化（社宅・出張旅費規程等） → 約20〜50万円の削減</span><br>
+        <span style="margin-left:12px;">・小規模企業共済・iDeCo・経営セーフティ共済の活用 → 約30〜60万円の削減</span><br>
+        これらは「脱税」ではなく、税法が<strong>認めている制度を正しく使い切る</strong>ことで実現できます。
+      </div>
+    </div>
+  </div>
+
   <div class="cards">
 
     <!-- Easy版（緑） -->
@@ -456,7 +497,7 @@ body::before {
       <h2>RPGで学ぶ版</h2>
       <div class="desc">
         専門的な会計・財務・税務を超簡単に。<br>
-        「数字」を武器に変える考え方をRPGゲーム（ドラゴンクエスト）を例に全8部構成で徹底解説。
+        最新のMBA経営戦略をRPGの世界観で直感的に理解し、「数字」を武器に変える。全8部構成。
       </div>
       <div class="card-img">
         <img src="img_easy.jpg" alt="RPGで学ぶ版">
@@ -472,8 +513,8 @@ body::before {
       <div class="badge">Professional</div>
       <h2>本格・専門版</h2>
       <div class="desc">
-        個人事業主からCFOまで対応する、約18万文字の体系的な教科書。<br>
-        税率・法令・実務手順を網羅した完全版リファレンス。
+        ハーバードMBAレベルの経営戦略から税務スキームまで。<br>
+        最新の会計基準・税法に準拠した、実戦的な完全版リファレンス。
       </div>
       <div class="card-img">
         <img src="img_practical.jpg" alt="本格・専門版">
@@ -489,8 +530,8 @@ body::before {
       <div class="badge">Practical</div>
       <h2>会計・財務・税務の実務</h2>
       <div class="desc">
-        簿記の仕組みからHowの部分を徹底解説。<br>
-        論理飛躍ゼロで、実務に必要な手順をすべて網羅。
+        簿記の仕組みから節税スキーム構築まで徹底解説。<br>
+        論理飛躍ゼロで、合法的に税負担を最小化する実務手順を網羅。
       </div>
       <div class="card-img">
         <img src="img_pro.jpg" alt="会計・財務・税務の実務">
