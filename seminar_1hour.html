@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>セミナー資料｜知らないと損する「個人事業主の税金」の真実</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0f0f0f;--surface:#1a1a1a;--surface2:#242424;--text:#f0f0f0;--text2:#a0a0a0;--accent:#f59e0b;--accent2:#ef4444;--green:#22c55e;--blue:#3b82f6;--border:#333}
+body{font-family:"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;background:var(--bg);color:var(--text);line-height:1.8;font-size:16px}
+a{color:var(--accent);text-decoration:none}
+
+/* Slide layout */
+.slide{min-height:100vh;padding:60px 40px;display:flex;flex-direction:column;justify-content:center;max-width:960px;margin:0 auto;border-bottom:1px solid var(--border)}
+.slide:last-child{border-bottom:none}
+
+/* Typography */
+h1{font-size:42px;font-weight:900;line-height:1.3;margin-bottom:16px;letter-spacing:-0.02em}
+h2{font-size:32px;font-weight:800;line-height:1.3;margin-bottom:12px;letter-spacing:-0.01em}
+h3{font-size:22px;font-weight:700;margin-bottom:8px;color:var(--accent)}
+h4{font-size:17px;font-weight:700;margin:20px 0 8px;color:var(--text)}
+p{margin-bottom:14px;color:var(--text2)}
+.big{font-size:20px;color:var(--text);line-height:1.9}
+.huge{font-size:64px;font-weight:900;color:var(--accent);line-height:1.1}
+.huge-red{font-size:64px;font-weight:900;color:var(--accent2);line-height:1.1}
+.highlight{color:var(--accent);font-weight:700}
+.highlight-red{color:var(--accent2);font-weight:700}
+.highlight-green{color:var(--green);font-weight:700}
+
+/* Tag */
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:4px 12px;border-radius:4px;margin-bottom:20px}
+.tag-time{background:var(--accent);color:#000}
+.tag-section{background:var(--accent2);color:#fff}
+.tag-action{background:var(--green);color:#000}
+
+/* Cards */
+.card-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px}
+.card h4{margin-top:0;color:var(--accent)}
+.card p{font-size:14px;margin-bottom:0}
+.card-full{grid-column:1/-1}
+
+/* Table */
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px}
+th{background:var(--surface2);color:var(--accent);padding:10px 14px;text-align:left;font-weight:700;border:1px solid var(--border)}
+td{padding:10px 14px;border:1px solid var(--border);color:var(--text2)}
+tr:hover td{background:var(--surface)}
+td strong{color:var(--text)}
+
+/* Quote */
+.quote{border-left:4px solid var(--accent);padding:16px 20px;margin:20px 0;background:var(--surface);border-radius:0 8px 8px 0;font-size:18px;color:var(--text);font-style:italic}
+
+/* Box */
+.box{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:20px;margin:16px 0}
+.box-accent{border-left:4px solid var(--accent)}
+.box-red{border-left:4px solid var(--accent2);background:rgba(239,68,68,0.05)}
+.box-green{border-left:4px solid var(--green);background:rgba(34,197,94,0.05)}
+
+/* Before/After */
+.compare{display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:center;margin:20px 0}
+.compare-box{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;text-align:center}
+.compare-arrow{font-size:32px;color:var(--accent)}
+.compare-bad{border-color:var(--accent2)}
+.compare-good{border-color:var(--green)}
+
+/* Timeline */
+.timeline{margin:16px 0}
+.timeline-item{display:flex;gap:16px;margin-bottom:16px;align-items:flex-start}
+.timeline-time{min-width:80px;font-size:13px;font-weight:700;color:var(--accent);padding-top:2px}
+.timeline-content{flex:1;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px 18px}
+.timeline-content h4{margin:0 0 4px;font-size:15px}
+.timeline-content p{font-size:13px;margin:0;color:var(--text2)}
+
+/* Script note */
+.script{background:var(--surface2);border-radius:8px;padding:16px 20px;margin:16px 0;font-size:13px;color:var(--text2);border:1px dashed var(--border)}
+.script::before{content:"🎤 トークスクリプト";display:block;font-size:11px;font-weight:700;color:var(--accent);margin-bottom:8px;letter-spacing:0.05em}
+
+/* List */
+ul,ol{margin:0 0 14px 20px;color:var(--text2)}
+li{margin-bottom:6px}
+li strong{color:var(--text)}
+
+/* Responsive */
+@media(max-width:700px){
+  .slide{padding:40px 20px}
+  h1{font-size:28px}
+  h2{font-size:24px}
+  .huge,.huge-red{font-size:40px}
+  .card-grid{grid-template-columns:1fr}
+  .compare{grid-template-columns:1fr;text-align:center}
+  .compare-arrow{transform:rotate(90deg)}
+}
+</style>
+</head>
+<body>
+
+<!-- ========== COVER ========== -->
+<div class="slide">
+  <span class="tag tag-section">1-HOUR SEMINAR</span>
+  <h1>知らないと損する<br>「個人事業主の税金」の真実</h1>
+  <p class="big">──あなたは毎年、数百万円を「合法的に」取り戻せるかもしれない。</p>
+  <div style="margin-top:32px;padding:20px 24px;background:var(--surface);border-radius:12px;border:1px solid var(--border)">
+    <p style="margin:0;font-size:14px;color:var(--text2)">
+      <strong style="color:var(--text)">対象：</strong>個人事業主・フリーランス・小規模法人の経営者<br>
+      <strong style="color:var(--text)">所要時間：</strong>60分（講義50分＋質疑応答10分）<br>
+      <strong style="color:var(--text)">ゴール：</strong>「明日から実行できる節税アクション」を最低3つ持ち帰る
+    </p>
+  </div>
+</div>
+
+<!-- ========== AGENDA ========== -->
+<div class="slide">
+  <span class="tag tag-time">AGENDA</span>
+  <h2>本日の流れ</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-time">0:00-0:05</div>
+      <div class="timeline-content">
+        <h4>オープニング：衝撃の事実</h4>
+        <p>個人事業主が「知らない」だけで失っている金額</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-time">0:05-0:15</div>
+      <div class="timeline-content">
+        <h4>第1章：税金の「構造」を知る</h4>
+        <p>なぜ同じ売上でも手取りが数百万円も違うのか</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-time">0:15-0:35</div>
+      <div class="timeline-content">
+        <h4>第2章：今日から使える「7つの武器」</h4>
+        <p>税理士が教えてくれない具体的な節税スキーム</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-time">0:35-0:45</div>
+      <div class="timeline-content">
+        <h4>第3章：法人化の「損益分岐点」</h4>
+        <p>いつ法人化すべきか？具体的な数字で判断する</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-time">0:45-0:50</div>
+      <div class="timeline-content">
+        <h4>第4章：引退時に発動する「最強の必殺技」</h4>
+        <p>退職金スキームで長期500〜2,000万円を守る</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-time">0:50-1:00</div>
+      <div class="timeline-content">
+        <h4>Q&A・まとめ</h4>
+        <p>明日から実行するアクションリスト</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== OPENING: SHOCK ========== -->
+<div class="slide">
+  <span class="tag tag-time">0:00 - 0:05</span>
+  <h3>オープニング</h3>
+  <h2>まず、1つだけ質問させてください。</h2>
+  <p class="big" style="margin-top:24px">「あなたは去年、税金をいくら払いましたか？」</p>
+  <p class="big">では、もう1つ。</p>
+  <p class="big">「そのうち、<span class="highlight-red">払わなくてよかった分</span>がいくらか、知っていますか？」</p>
+
+  <div class="script">
+    ここで少し間を置く。ほとんどの人が答えられない。「実はほとんどの個人事業主は、自分がいくら余分に払っているか、知りません。なぜなら、税理士は"正しく申告する"のが仕事で、"税金を最小化する提案"をするインセンティブがないからです。今日はその"知らないだけで失っているお金"の話をします。」
+  </div>
+</div>
+
+<div class="slide">
+  <h3>衝撃の数字</h3>
+  <h2>年商800万円の個人事業主が<br>「知らない」だけで失っている金額</h2>
+
+  <div class="compare">
+    <div class="compare-box compare-bad">
+      <p style="font-size:12px;color:var(--accent2);font-weight:700;margin-bottom:4px">何もしない場合</p>
+      <div style="font-size:48px;font-weight:900;color:var(--accent2)">185万円</div>
+      <p style="font-size:13px;margin:8px 0 0">所得税 + 住民税 + 事業税 + 社保</p>
+    </div>
+    <div class="compare-arrow">→</div>
+    <div class="compare-box compare-good">
+      <p style="font-size:12px;color:var(--green);font-weight:700;margin-bottom:4px">今日の知識を適用した場合</p>
+      <div style="font-size:48px;font-weight:900;color:var(--green)">49万円</div>
+      <p style="font-size:13px;margin:8px 0 0">同じ売上・同じ生活水準で</p>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin:16px 0">
+    <p style="font-size:14px;color:var(--text2);margin-bottom:4px">差額</p>
+    <div class="huge">年間136万円</div>
+    <p style="color:var(--text2);margin-top:8px">10年で <strong style="color:var(--accent);font-size:24px">1,360万円</strong> の差。これが「知識の差」です。</p>
+  </div>
+
+  <div class="script">
+    「年商800万円、経費率30%、課税所得560万円の個人事業主を想定しています。何もしないと累進課税でごっそり持っていかれる。でも、今日お伝えするテクニックを全部適用すると、同じ売上で手取りが136万円増えます。しかも全部合法です。10年で1,360万円。軽自動車どころか、ベンツが買えます。」
+  </div>
+</div>
+
+<!-- ========== CHAPTER 1: STRUCTURE ========== -->
+<div class="slide">
+  <span class="tag tag-time">0:05 - 0:15</span>
+  <h3>第1章</h3>
+  <h2>税金の「構造」を知る<br><span style="font-size:20px;color:var(--text2);font-weight:400">── なぜ同じ売上でも手取りが全然違うのか</span></h2>
+
+  <div class="script">
+    「まず、税金の"構造"を理解しましょう。多くの人は"税率が高い"と嘆きますが、問題は税率ではなく"構造を知らないこと"です。構造を知れば、合法的に課税ベースを圧縮できます。」
+  </div>
+</div>
+
+<div class="slide">
+  <h3>ポイント①</h3>
+  <h2>税金は「売上」にかかるのではない。<br>「課税所得」にかかる。</h2>
+
+  <div style="text-align:center;margin:24px 0;font-size:20px;color:var(--text)">
+    <span style="opacity:0.5">売上</span>
+    <span style="margin:0 8px">−</span>
+    <span style="color:var(--green);font-weight:700">経費</span>
+    <span style="margin:0 8px">−</span>
+    <span style="color:var(--blue);font-weight:700">控除</span>
+    <span style="margin:0 8px">=</span>
+    <span style="color:var(--accent2);font-weight:700">課税所得</span>
+    <span style="margin:0 8px">×</span>
+    <span style="opacity:0.5">税率</span>
+    <span style="margin:0 8px">=</span>
+    <span style="opacity:0.5">税額</span>
+  </div>
+
+  <p class="big">つまり、<span class="highlight-green">「経費」と「控除」を最大化</span>すれば、課税所得が圧縮され、税金が減る。</p>
+
+  <div class="box box-accent">
+    <h4>ここがポイント</h4>
+    <p>「経費を増やす」＝「無駄遣いする」ではありません。<strong>今まで経費にしていなかったものを、正しく経費にする</strong>だけです。税法が認めている経費枠を使い切っていない人がほとんどです。</p>
+  </div>
+
+  <div class="script">
+    「"経費を増やす"というと、不要な買い物をするイメージがありますよね。違います。今まで"これ経費にしていいのかな？"と迷って計上していなかったものを、正しく計上するだけです。家賃の一部、電気代の一部、スマホ代、書籍代、セミナー代──全部、事業に使っている割合は経費です。」
+  </div>
+</div>
+
+<div class="slide">
+  <h3>ポイント②</h3>
+  <h2>個人の所得税は「累進課税」。<br>稼ぐほど税率が上がる。</h2>
+
+  <table>
+    <tr><th>課税所得</th><th>所得税率</th><th>住民税</th><th>事業税</th><th>実効税率（合計）</th></tr>
+    <tr><td>〜195万円</td><td>5%</td><td>10%</td><td>−</td><td>約15%</td></tr>
+    <tr><td>195〜330万円</td><td>10%</td><td>10%</td><td>3〜5%</td><td>約23〜25%</td></tr>
+    <tr><td>330〜695万円</td><td>20%</td><td>10%</td><td>3〜5%</td><td><strong>約33〜35%</strong></td></tr>
+    <tr><td>695〜900万円</td><td>23%</td><td>10%</td><td>3〜5%</td><td><strong>約36〜38%</strong></td></tr>
+    <tr><td style="color:var(--accent2);font-weight:700">900万円〜</td><td style="color:var(--accent2);font-weight:700">33%</td><td>10%</td><td>3〜5%</td><td style="color:var(--accent2);font-weight:700">約46〜48%</td></tr>
+    <tr><td style="color:var(--accent2);font-weight:700">1,800万円〜</td><td style="color:var(--accent2);font-weight:700">40%</td><td>10%</td><td>3〜5%</td><td style="color:var(--accent2);font-weight:700">約53〜55%</td></tr>
+  </table>
+
+  <div class="box box-red">
+    <h4>ここに注目</h4>
+    <p><strong>課税所得900万円を超えると、稼いだ分の約半分が税金で消えます。</strong>一方、法人税は800万円以下の部分が約15%、超えても約23%。この「税率の逆転」が、あとで話す法人化の判断基準になります。</p>
+  </div>
+
+  <div class="script">
+    「この表を見てください。課税所得900万円を超えると、所得税だけで33%。住民税10%、事業税5%を足すと48%。稼いだ分のほぼ半分が持っていかれます。でも法人税は最大でも23%程度。この"逆転ポイント"が後で大事になります。覚えておいてください。」
+  </div>
+</div>
+
+<div class="slide">
+  <h3>ポイント③</h3>
+  <h2>節税・租税回避・脱税<br>── 3つの境界線を知る</h2>
+
+  <div class="card-grid">
+    <div class="card" style="border-left:4px solid var(--green)">
+      <h4 style="color:var(--green)">節税 ✅ やるべき</h4>
+      <p><strong>税法が「使ってください」と用意している制度を、正しく使う。</strong><br>青色申告、小規模企業共済、社宅制度、旅費規程など。リスクゼロ。今日の話はすべてこれ。</p>
+    </div>
+    <div class="card" style="border-left:4px solid var(--accent)">
+      <h4 style="color:var(--accent)">租税回避 ⚠️ グレーゾーン</h4>
+      <p><strong>形式的には合法だが、法の趣旨に反する。</strong><br>実態のないペーパーカンパニー、タックスヘイブンの利用など。税務署に否認されるリスクあり。</p>
+    </div>
+    <div class="card card-full" style="border-left:4px solid var(--accent2)">
+      <h4 style="color:var(--accent2)">脱税 ❌ 犯罪</h4>
+      <p><strong>所得隠し、架空経費、二重帳簿。</strong>重加算税35〜40%＋刑事罰（懲役・罰金）。絶対にやってはいけない。</p>
+    </div>
+  </div>
+
+  <div class="quote">
+    今日お話しするのは、すべて「節税」です。<br>
+    税法が明示的に認めている制度を、正しく使い切る。それだけで年間100万円以上の差が出ます。
+  </div>
+
+  <div class="script">
+    「大事な前提です。今日の話はすべて"節税"──つまり、税法が"使ってください"と用意している制度を正しく使うだけの話です。脱税は論外。租税回避もやりません。それでも年間100万円以上の差が出る。それくらい、多くの人が制度を使い切れていない、ということです。」
+  </div>
+</div>
+
+<!-- ========== CHAPTER 2: 7 WEAPONS ========== -->
+<div class="slide">
+  <span class="tag tag-time">0:15 - 0:35</span>
+  <h3>第2章</h3>
+  <h2>今日から使える「7つの武器」<br><span style="font-size:20px;color:var(--text2);font-weight:400">── 税理士が積極的に教えてくれない節税スキーム</span></h2>
+
+  <div class="script">
+    「ここからが本題です。"なぜ税理士が教えてくれないのか"。理由は簡単で、税理士の仕事は"正しく申告する"ことであって、"税金を減らす提案をする"ことではないからです。提案してミスがあったら責任問題になる。だから保守的になる。結果として、あなたは使える制度を使わないまま、余分な税金を払い続ける。今日はその"使える制度"を7つ、具体的な金額つきでお話しします。」
+  </div>
+</div>
+
+<!-- Weapon 1 -->
+<div class="slide">
+  <h3>武器① 青色申告のフル活用</h3>
+  <h2>「65万円控除」を取りこぼしていませんか？</h2>
+
+  <table>
+    <tr><th>申告方法</th><th>控除額</th><th>条件</th><th>節税効果（税率30%の場合）</th></tr>
+    <tr><td>白色申告</td><td>0円</td><td>なし</td><td>0円</td></tr>
+    <tr><td>青色申告（簡易簿記）</td><td>10万円</td><td>現金出納帳のみ</td><td>約3万円</td></tr>
+    <tr><td>青色申告（複式簿記・紙提出）</td><td>55万円</td><td>複式簿記＋BS添付</td><td>約16.5万円</td></tr>
+    <tr><td style="color:var(--green);font-weight:700">青色申告（複式簿記＋e-Tax）</td><td style="color:var(--green);font-weight:700">65万円</td><td>複式簿記＋e-Tax or 電子帳簿</td><td style="color:var(--green);font-weight:700">約19.5万円</td></tr>
+  </table>
+
+  <div class="box box-green">
+    <h4>プラスアルファの特典</h4>
+    <ul>
+      <li><strong>赤字の3年間繰越：</strong>今年赤字なら、来年以降の黒字と相殺できる</li>
+      <li><strong>少額減価償却資産の特例：</strong>30万円未満の備品を一括で経費にできる（年間300万円まで）</li>
+      <li><strong>家族への給与（専従者給与）：</strong>配偶者や家族に給与を払い、所得を分散できる</li>
+    </ul>
+  </div>
+
+  <div class="script">
+    「まだ白色申告の方、いますか？今すぐ青色に切り替えてください。それだけで年19.5万円の節税です。会計ソフトを使えば複式簿記は自動。freeeやマネーフォワードなら月額1,000円程度。月1,000円の投資で年19.5万円リターン。ROI 1,900%です。さらに、30万円未満の備品は一括経費にできる。パソコンを29万円で買えば、その年に全額経費。これを知らない人が本当に多い。」
+  </div>
+</div>
+
+<!-- Weapon 2 -->
+<div class="slide">
+  <h3>武器② 小規模企業共済</h3>
+  <h2>「最強の節税商品」は<br>国が作っている。</h2>
+
+  <div class="card-grid">
+    <div class="card">
+      <h4>掛金：月1,000〜70,000円</h4>
+      <p>年間最大<strong style="color:var(--accent)">84万円</strong>が<strong>全額所得控除</strong>。経費ではなく「控除」なので、課税所得が直接84万円減る。</p>
+    </div>
+    <div class="card">
+      <h4>節税効果</h4>
+      <p>課税所得500万円（税率30%）の場合：<br><strong style="color:var(--green);font-size:20px">年間約25.2万円</strong>の節税</p>
+    </div>
+    <div class="card">
+      <h4>受取時の優遇</h4>
+      <p>一括受取 → <strong>退職所得控除</strong>が適用<br>分割受取 → <strong>公的年金等控除</strong>が適用<br>どちらも大幅に税優遇</p>
+    </div>
+    <div class="card">
+      <h4>いざという時の安心</h4>
+      <p>加入期間に応じて<strong>低利の貸付制度</strong>あり。事業資金が必要な時にも使える。掛金の範囲内で借入可能。</p>
+    </div>
+  </div>
+
+  <div class="script">
+    「個人事業主が使える"最強の節税商品"は、実は国が作っています。小規模企業共済。月7万円、年84万円を払うと、全額が所得控除。課税所得が84万円まるごと減る。税率30%なら、年25万円の節税。しかも、将来受け取るときは"退職所得控除"が使えるので、受取時の税金も激安。払い込んだお金は消えるわけじゃない。将来戻ってくる。なのに、今の税金は確実に減る。こんな商品、民間には存在しません。」
+  </div>
+</div>
+
+<!-- Weapon 3 -->
+<div class="slide">
+  <h3>武器③ iDeCo（個人型確定拠出年金）</h3>
+  <h2>「もう1つの全額控除」を<br>重ね掛けする。</h2>
+
+  <div class="card-grid">
+    <div class="card card-full">
+      <h4>個人事業主の掛金上限：月67,000円（年間804,000円）</h4>
+      <p>小規模企業共済（84万円）+ iDeCo（80.4万円）= <strong style="color:var(--accent);font-size:18px">年間164.4万円が全額所得控除</strong></p>
+      <p>税率30%なら、<strong style="color:var(--green);font-size:18px">2つ合わせて年間約49.3万円の節税</strong>。これだけで毎月4万円以上、手取りが増える計算です。</p>
+    </div>
+  </div>
+
+  <div class="box box-accent">
+    <h4>共済 + iDeCo の「2段重ね」が最強な理由</h4>
+    <p>どちらも<strong>全額所得控除</strong>で、将来の受取時にも税優遇あり。2つ合わせると課税所得が164万円減る。これは「売上を164万円減らした」のと同じ効果。でも実際にはお金は消えていない──将来の自分に「貯金」しているだけ。</p>
+  </div>
+
+  <div class="script">
+    「小規模企業共済に加えて、iDeCoも重ね掛けできます。個人事業主のiDeCo上限は月67,000円。年80.4万円が全額控除。共済と合わせると、年164万円が課税所得から消える。税率30%なら年49万円の節税。毎月4万円以上、手取りが増える。しかもお金は消えていない。60歳以降に受け取れる。"今の税金を減らしながら、将来の自分に貯金する"──これが国が用意したチート技です。」
+  </div>
+</div>
+
+<!-- Weapon 4 -->
+<div class="slide">
+  <h3>武器④ 経営セーフティ共済（倒産防止共済）</h3>
+  <h2>「全額経費」なのに<br>40ヶ月後に100%戻ってくる。</h2>
+
+  <div style="text-align:center;margin:24px 0">
+    <p style="color:var(--text2);font-size:14px;margin-bottom:4px">掛金</p>
+    <div style="font-size:36px;font-weight:900;color:var(--text)">月5,000円〜200,000円</div>
+    <p style="color:var(--text2);font-size:14px;margin-top:16px;margin-bottom:4px">年間最大</p>
+    <div style="font-size:36px;font-weight:900;color:var(--accent)">240万円が全額経費</div>
+    <p style="color:var(--text2);font-size:14px;margin-top:16px;margin-bottom:4px">40ヶ月（3年4ヶ月）後の解約返戻率</p>
+    <div style="font-size:36px;font-weight:900;color:var(--green)">100%</div>
+  </div>
+
+  <div class="box box-green">
+    <h4>なぜこれが「チート」なのか</h4>
+    <p>通常、経費にしたお金は戻ってこない。飲食代も広告費も消耗品も、払ったら終わり。でもセーフティ共済は<strong>全額経費にできるのに、40ヶ月後に全額返ってくる</strong>。つまり「税金を減らすためだけにお金を預けて、後で全部返してもらう」ことができる。</p>
+    <p style="margin-top:8px"><strong>年間節税効果（税率30%の場合）：約72万円</strong></p>
+    <p style="margin-top:4px;font-size:13px;color:var(--text2)">※解約時に収入として課税されるため、赤字の年や法人化の年に解約するのがコツ。</p>
+  </div>
+
+  <div class="script">
+    「これ、知らない人が多いんですが、経営セーフティ共済は"経費にしたお金が全額戻ってくる"という、ちょっとバグみたいな制度です。月20万円、年240万円を経費にして、3年4ヶ月後に全額返ってくる。税率30%なら年72万円の節税。ただし、解約時に収入になるので、タイミングが大事。赤字の年や法人化する年に解約すれば、課税を最小化できます。」
+  </div>
+</div>
+
+<!-- Weapon 5 -->
+<div class="slide">
+  <h3>武器⑤ 家事按分の「正しい」やり方</h3>
+  <h2>自宅で仕事してるなら、<br>家賃の30〜50%は経費です。</h2>
+
+  <table>
+    <tr><th>項目</th><th>按分の目安</th><th>月額例</th><th>年間経費</th></tr>
+    <tr><td>家賃（1LDK、作業部屋あり）</td><td>30〜50%</td><td>12万円 × 40% = 4.8万円</td><td><strong>57.6万円</strong></td></tr>
+    <tr><td>電気代</td><td>30〜40%</td><td>1.5万円 × 35% = 5,250円</td><td><strong>6.3万円</strong></td></tr>
+    <tr><td>インターネット回線</td><td>50〜80%</td><td>5,000円 × 60% = 3,000円</td><td><strong>3.6万円</strong></td></tr>
+    <tr><td>スマホ代</td><td>50〜70%</td><td>1万円 × 60% = 6,000円</td><td><strong>7.2万円</strong></td></tr>
+    <tr><td>車両費（ガソリン・保険・車検）</td><td>事業使用割合</td><td>3万円 × 50% = 1.5万円</td><td><strong>18万円</strong></td></tr>
+    <tr><th>合計</th><th></th><th></th><th style="color:var(--accent);font-size:16px;font-weight:700">92.7万円/年</th></tr>
+  </table>
+
+  <p class="big" style="margin-top:16px">これだけで課税所得が92.7万円減る。<span class="highlight">税率30%なら約27.8万円の節税</span>。</p>
+
+  <div class="script">
+    「自宅で仕事している方、手を挙げてください。（大半が挙手）その方、家賃を経費にしていますか？していない方、損しています。自宅で仕事しているなら、面積比や時間比で按分した家賃は立派な経費です。電気代もネット代もスマホ代も。合計すると年間90万円以上になることもある。税率30%なら28万円の節税。"そんなの怖くてできない"という方がいますが、税法上認められた正当な経費計上です。ポイントは、按分の根拠を記録しておくこと。"仕事部屋の面積は全体の40%"という根拠があれば、税務調査でも問題ありません。」
+  </div>
+</div>
+
+<!-- Weapon 6 -->
+<div class="slide">
+  <h3>武器⑥ 少額減価償却資産の特例</h3>
+  <h2>30万円未満の買い物は<br>全額「今年の経費」にできる。</h2>
+
+  <div class="compare">
+    <div class="compare-box compare-bad">
+      <p style="font-size:12px;color:var(--accent2);font-weight:700;margin-bottom:4px">知らない場合</p>
+      <div style="font-size:20px;font-weight:700;color:var(--text)">25万円のPC</div>
+      <p style="font-size:14px;margin:8px 0 0;color:var(--text2)">4年間で分割して経費化<br>（減価償却）<br>今年の経費：62,500円</p>
+    </div>
+    <div class="compare-arrow">→</div>
+    <div class="compare-box compare-good">
+      <p style="font-size:12px;color:var(--green);font-weight:700;margin-bottom:4px">特例を使う場合</p>
+      <div style="font-size:20px;font-weight:700;color:var(--text)">25万円のPC</div>
+      <p style="font-size:14px;margin:8px 0 0;color:var(--text2)">今年に全額経費化<br>（一括損金）<br>今年の経費：<strong style="color:var(--green)">250,000円</strong></p>
+    </div>
+  </div>
+
+  <div class="box box-accent">
+    <h4>決算前の「駆け込み購入」戦略</h4>
+    <p>12月に「来年必要になるもの」を前倒しで購入すれば、その年の経費にできる。PC、ソフトウェア、デスク、チェア、カメラ──30万円未満なら何でもOK（年間300万円まで）。</p>
+    <p><strong>注意：</strong>この特例は<strong>青色申告者限定</strong>。白色申告では使えません。</p>
+  </div>
+
+  <div class="script">
+    「PCを買うとき、"4年で減価償却"と思っていませんか？青色申告者なら、30万円未満は全額その年の経費にできます。25万円のPCなら、通常は年62,500円ずつ4年かけて経費にするところ、一発で25万円全額経費。12月に"来年使うもの"を前倒しで買えば、今年の税金が減る。これ、年間300万円までOKです。」
+  </div>
+</div>
+
+<!-- Weapon 7 -->
+<div class="slide">
+  <h3>武器⑦ 専従者給与</h3>
+  <h2>配偶者に給与を払って<br>「所得を分散」する。</h2>
+
+  <div class="compare">
+    <div class="compare-box compare-bad">
+      <p style="font-size:12px;color:var(--accent2);font-weight:700;margin-bottom:4px">1人で800万円の所得</p>
+      <div style="font-size:18px;font-weight:700;color:var(--text)">課税所得 800万円</div>
+      <p style="font-size:14px;margin:8px 0 0;color:var(--text2)">税率23%ゾーン<br>所得税 約120万円</p>
+    </div>
+    <div class="compare-arrow">→</div>
+    <div class="compare-box compare-good">
+      <p style="font-size:12px;color:var(--green);font-weight:700;margin-bottom:4px">配偶者に300万円を給与支給</p>
+      <div style="font-size:18px;font-weight:700;color:var(--text)">本人500万 + 配偶者300万</div>
+      <p style="font-size:14px;margin:8px 0 0;color:var(--text2)">両方とも税率10〜20%ゾーン<br>所得税 合計約65万円</p>
+    </div>
+  </div>
+
+  <p style="text-align:center;margin:16px 0">
+    <span style="font-size:14px;color:var(--text2)">差額</span><br>
+    <span style="font-size:32px;font-weight:900;color:var(--accent)">年間約55万円の節税</span>
+  </p>
+
+  <div class="box box-accent">
+    <h4>条件</h4>
+    <ul>
+      <li>青色申告者であること</li>
+      <li>「青色事業専従者給与に関する届出書」を税務署に提出済み</li>
+      <li>配偶者が実際に事業に従事していること（経理、事務、顧客対応など）</li>
+      <li>給与額が仕事内容に対して「適正」であること（年300万円程度が安全圏）</li>
+    </ul>
+  </div>
+
+  <div class="script">
+    「これは累進課税の"裏技"です。1人で800万円稼ぐと税率23%ゾーン。でも配偶者に300万円を専従者給与として払えば、自分は500万円、配偶者は300万円。両方とも10〜20%ゾーンに収まる。所得税だけで年55万円の差。配偶者が実際に経理やメール対応をしているなら、これは完全に合法。ポイントは事前に届出書を出しておくこと。」
+  </div>
+</div>
+
+<!-- Summary of 7 weapons -->
+<div class="slide">
+  <h3>7つの武器まとめ</h3>
+  <h2>全部使うと、年間いくら？</h2>
+
+  <table>
+    <tr><th>#</th><th>武器</th><th>年間節税額</th><th>難易度</th></tr>
+    <tr><td>①</td><td>青色申告65万円控除</td><td><strong>約19.5万円</strong></td><td>★☆☆ 簡単</td></tr>
+    <tr><td>②</td><td>小規模企業共済（月7万円）</td><td><strong>約25.2万円</strong></td><td>★☆☆ 簡単</td></tr>
+    <tr><td>③</td><td>iDeCo（月6.7万円）</td><td><strong>約24.1万円</strong></td><td>★☆☆ 簡単</td></tr>
+    <tr><td>④</td><td>経営セーフティ共済（月20万円）</td><td><strong>約72万円</strong></td><td>★★☆ 普通</td></tr>
+    <tr><td>⑤</td><td>家事按分の最適化</td><td><strong>約27.8万円</strong></td><td>★☆☆ 簡単</td></tr>
+    <tr><td>⑥</td><td>少額減価償却資産の特例</td><td><strong>約10〜30万円</strong></td><td>★☆☆ 簡単</td></tr>
+    <tr><td>⑦</td><td>専従者給与</td><td><strong>約55万円</strong></td><td>★★☆ 普通</td></tr>
+    <tr style="background:var(--surface2)"><th></th><th>合計</th><th style="color:var(--accent);font-size:18px;font-weight:900">約233〜253万円/年</th><th></th></tr>
+  </table>
+
+  <p class="big" style="margin-top:16px">課税所得800万円・税率30%の個人事業主が、<span class="highlight">7つの武器をすべて使うと年間約250万円</span>の節税。<span class="highlight-red">10年で2,500万円の差。</span></p>
+
+  <div class="script">
+    「7つ全部使うと年間約250万円。10年で2,500万円。これだけの差が"知っているか知らないか"だけで生まれる。しかも、どれも難易度は低い。★1つのものは今日帰ってすぐできる。明日の行動を変えるだけで、来年の手取りが変わります。」
+  </div>
+</div>
+
+<!-- ========== CHAPTER 3: INCORPORATION ========== -->
+<div class="slide">
+  <span class="tag tag-time">0:35 - 0:45</span>
+  <h3>第3章</h3>
+  <h2>法人化の「損益分岐点」<br><span style="font-size:20px;color:var(--text2);font-weight:400">── いつ法人にすべきか？</span></h2>
+
+  <div class="script">
+    「さて、ここまでは個人事業主のままでできる節税でした。でも、年商が上がってくると"法人化"を考えるべきタイミングが来ます。問題は"いつか"。よく聞く"年商1,000万円で法人化"は必ずしも正しくない。正確な分岐点を数字で見ましょう。」
+  </div>
+</div>
+
+<div class="slide">
+  <h3>法人化の判断基準</h3>
+  <h2>課税所得800〜900万円が<br>「逆転ポイント」</h2>
+
+  <div class="card-grid">
+    <div class="card" style="border-left:4px solid var(--accent2)">
+      <h4 style="color:var(--accent2)">個人の税率（課税所得900万円超）</h4>
+      <p style="font-size:24px;font-weight:900;color:var(--accent2)">約46〜48%</p>
+      <p>所得税33% + 住民税10% + 事業税3〜5%</p>
+    </div>
+    <div class="card" style="border-left:4px solid var(--green)">
+      <h4 style="color:var(--green)">法人の税率（800万円以下）</h4>
+      <p style="font-size:24px;font-weight:900;color:var(--green)">約22〜25%</p>
+      <p>法人税15% + 地方法人税 + 住民税 + 事業税</p>
+    </div>
+  </div>
+
+  <div class="box box-accent">
+    <h4>法人化で追加で使える武器</h4>
+    <ul>
+      <li><strong>社宅制度：</strong>法人が家賃を払い、自己負担は市場の10〜20%。差額は法人の経費。<span class="highlight">→ 年間30〜60万円の節税</span></li>
+      <li><strong>出張旅費規程：</strong>出張日当（1日2,000〜5,000円）を非課税で支給。法人は経費、個人は非課税。<span class="highlight">→ 年間20〜40万円の節税</span></li>
+      <li><strong>役員報酬の最適設計：</strong>法人税率と所得税率の「交差点」を計算し、手取り最大化。<span class="highlight">→ 年間60〜120万円の節税</span></li>
+      <li><strong>決算期の自由設定：</strong>利益が出るタイミングに合わせて決算月を選べる</li>
+      <li><strong>消費税の2年間免除：</strong>新設法人は原則として最初の2年間、消費税が免除</li>
+    </ul>
+  </div>
+
+  <div class="script">
+    「法人化すると使える武器が一気に増えます。社宅制度、旅費規程、役員報酬の最適化──これらは個人事業主では使えない。法人化のコスト（設立費用約25万円、税理士費用増、社会保険の事業主負担）を差し引いても、課税所得800万円超ならメリットがコストを上回るケースがほとんどです。」
+  </div>
+</div>
+
+<div class="slide">
+  <h3>上級テクニック</h3>
+  <h2>マイクロ法人スキーム<br>── 法人＋個人事業の「二刀流」</h2>
+
+  <div class="box box-accent">
+    <h4>仕組み</h4>
+    <p><strong>法人</strong>で一部の事業を行い、役員報酬を最低限（月5〜10万円）に設定。<strong>社会保険料を最小化</strong>する。<br>
+    <strong>個人事業</strong>で残りの事業を行い、青色申告65万円控除や専従者給与を活用する。</p>
+    <p style="margin-top:12px"><strong>効果：</strong></p>
+    <ul>
+      <li>社会保険料：国保の上限（約80〜100万円）→ 法人の最低社保（約30万円）に削減</li>
+      <li>法人側の経費枠（社宅・旅費規程等）も同時に活用可能</li>
+      <li>年間のトータル節税効果：<strong style="color:var(--accent)">約50〜100万円</strong></li>
+    </ul>
+  </div>
+
+  <div class="script">
+    「これは上級テクニックです。法人と個人事業を同時に持つ"二刀流"。法人の役員報酬を月5万円にすれば、社会保険料は最低ランクになる。個人事業では青色申告控除を使う。両方のメリットを同時に取る。年50〜100万円の節税効果がありますが、事業の分け方や税務リスクを理解した上でやる必要があるので、ここは税理士と相談してください。」
+  </div>
+</div>
+
+<!-- ========== CHAPTER 4: RETIREMENT ========== -->
+<div class="slide">
+  <span class="tag tag-time">0:45 - 0:50</span>
+  <h3>第4章</h3>
+  <h2>引退時に発動する「最強の必殺技」<br><span style="font-size:20px;color:var(--text2);font-weight:400">── 退職金スキーム</span></h2>
+</div>
+
+<div class="slide">
+  <h3>退職金の税制優遇</h3>
+  <h2>退職金は「半分」しか<br>課税されない。</h2>
+
+  <div style="text-align:center;margin:24px 0;font-size:18px;color:var(--text)">
+    課税退職所得 ＝（退職金 − 退職所得控除）× <span style="color:var(--green);font-size:28px;font-weight:900">1/2</span>
+  </div>
+
+  <table>
+    <tr><th>勤続年数</th><th>退職所得控除</th></tr>
+    <tr><td>20年以下</td><td>40万円 × 勤続年数（最低80万円）</td></tr>
+    <tr><td>20年超</td><td>800万円 + 70万円 ×（勤続年数 − 20年）</td></tr>
+  </table>
+
+  <div class="box box-green">
+    <h4>具体例：勤続30年、退職金3,000万円の場合</h4>
+    <p>退職所得控除 = 800万 + 70万 × 10年 = <strong>1,500万円</strong></p>
+    <p>課税退職所得 = (3,000万 − 1,500万) × 1/2 = <strong>750万円</strong></p>
+    <p>所得税 = 約90万円（税率約3%）</p>
+    <p style="margin-top:12px">もし退職金ではなく「給与」として受け取ったら：<br>
+    所得税 + 住民税 = 約<strong style="color:var(--accent2)">900万円</strong>（税率約30%）</p>
+    <p style="margin-top:12px;font-size:18px;font-weight:700;color:var(--green)">差額：約810万円の節税。</p>
+  </div>
+
+  <div class="script">
+    「これが引退時に発動する"最強の必殺技"です。退職金3,000万円の場合、普通の給与として受け取ったら税金900万円。でも退職金として受け取れば税金たった90万円。差額810万円。なぜか？退職所得控除で1,500万円が非課税になり、残りも半分しか課税されないから。30年間コツコツ経営してきたご褒美として、国が用意した最大級の税優遇です。法人を作って、将来ここで受け取る設計にしておくかどうかで、数百万〜数千万の差が出ます。」
+  </div>
+</div>
+
+<!-- ========== CLOSING ========== -->
+<div class="slide">
+  <span class="tag tag-time">0:50 - 1:00</span>
+  <h3>まとめ</h3>
+  <h2>明日から実行する<br>アクションリスト</h2>
+
+  <div class="card-grid">
+    <div class="card" style="border-left:4px solid var(--green)">
+      <h4 style="color:var(--green)">今日やること（5分）</h4>
+      <ul>
+        <li>小規模企業共済のウェブサイトを開く</li>
+        <li>iDeCoの資料請求をする</li>
+        <li>今の申告が白色か青色か確認する</li>
+      </ul>
+    </div>
+    <div class="card" style="border-left:4px solid var(--blue)">
+      <h4 style="color:var(--blue)">今週やること（1時間）</h4>
+      <ul>
+        <li>家事按分の一覧表を作る</li>
+        <li>30万円未満の備品で経費にしていないものをリストアップ</li>
+        <li>経営セーフティ共済の加入条件を確認する</li>
+      </ul>
+    </div>
+    <div class="card" style="border-left:4px solid var(--accent)">
+      <h4 style="color:var(--accent)">今月やること</h4>
+      <ul>
+        <li>青色申告していない人 → 来年分の青色申告承認申請書を提出</li>
+        <li>配偶者が事業を手伝っている → 専従者給与の届出書を提出</li>
+        <li>課税所得800万円超の人 → 法人化シミュレーションを税理士に依頼</li>
+      </ul>
+    </div>
+    <div class="card" style="border-left:4px solid var(--accent2)">
+      <h4 style="color:var(--accent2)">今年中にやること</h4>
+      <ul>
+        <li>小規模企業共済＋iDeCo＋セーフティ共済の3点セットに加入</li>
+        <li>マイクロ法人スキームの検討（該当する方）</li>
+        <li>退職金スキームの設計（法人の方）</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="slide">
+  <h2>最後に</h2>
+
+  <div class="quote">
+    税金は「知っている人が得をする」世界です。<br>
+    同じ売上でも、知識があるかないかで手取りが年間数百万円変わる。<br>
+    10年で数千万円。一生で億単位の差になり得る。<br><br>
+    今日の内容で分からないことがあれば、いつでも聞いてください。<br>
+    大事なのは「知った上で、行動すること」です。
+  </div>
+
+  <div style="text-align:center;margin-top:40px;">
+    <p style="color:var(--text2);font-size:14px">詳細な教科書（無料）はこちら：</p>
+    <p style="font-size:18px;font-weight:700;margin-top:8px">
+      <a href="index.html" style="color:var(--accent)">税金・会計・財務の教科書</a>
+    </p>
+    <p style="color:var(--text2);font-size:13px;margin-top:4px">RPGスタイル版 ／ プロフェッショナル版 ／ プラクティカル版の3種類</p>
+  </div>
+
+  <div class="script">
+    「今日お伝えしたのは、すべて税法が認めている合法的な制度の話です。"知っているか知らないか"だけで、人生レベルの金額が変わる。だから今日知ったことを、1つでもいいから"行動"に変えてください。小規模企業共済の申し込みは5分で終わります。それだけで来年、25万円手取りが増える。"知識"を"行動"に変えた瞬間、お金は動き始めます。本日はありがとうございました。」
+  </div>
+</div>
+
+<!-- ========== APPENDIX ========== -->
+<div class="slide" style="min-height:auto">
+  <h3>付録：参考リンク</h3>
+  <table>
+    <tr><th>制度</th><th>管轄</th><th>備考</th></tr>
+    <tr><td>小規模企業共済</td><td>中小機構</td><td>オンラインで加入申込可能</td></tr>
+    <tr><td>iDeCo</td><td>国民年金基金連合会</td><td>金融機関経由で申込</td></tr>
+    <tr><td>経営セーフティ共済</td><td>中小機構</td><td>1年以上の事業実績が必要</td></tr>
+    <tr><td>青色申告承認申請</td><td>所轄税務署</td><td>開業後2ヶ月以内 or 3/15まで</td></tr>
+    <tr><td>専従者給与届出</td><td>所轄税務署</td><td>経費算入開始の年の3/15まで</td></tr>
+  </table>
+  <p style="text-align:center;margin-top:24px;font-size:13px;color:var(--text2)">&copy; 2025 LLC.Snipers ── 税金・会計・財務の教科書</p>
+</div>
+
+</body>
+</html>
