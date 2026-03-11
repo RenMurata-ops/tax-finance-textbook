@@ -142,14 +142,14 @@ li strong{color:var(--text)}
       </div>
     </div>
     <div class="timeline-item">
-      <div class="timeline-time">0:45-0:50</div>
+      <div class="timeline-time">0:45-0:55</div>
       <div class="timeline-content">
-        <h4>第4章：引退時に発動する「最強の必殺技」</h4>
-        <p>退職金スキームで長期500〜2,000万円を守る</p>
+        <h4>第4章：常識を疑え──税法の「からくり」5選</h4>
+        <p>直感に反するのに完全合法。知った瞬間「ズルい」と思う仕組み</p>
       </div>
     </div>
     <div class="timeline-item">
-      <div class="timeline-time">0:50-1:00</div>
+      <div class="timeline-time">0:55-1:00</div>
       <div class="timeline-content">
         <h4>Q&A・まとめ</h4>
         <p>明日から実行するアクションリスト</p>
@@ -591,45 +591,224 @@ li strong{color:var(--text)}
   </div>
 </div>
 
-<!-- ========== CHAPTER 4: RETIREMENT ========== -->
+<!-- ========== CHAPTER 4: KARAKURI ========== -->
 <div class="slide">
-  <span class="tag tag-time">0:45 - 0:50</span>
+  <span class="tag tag-time">0:45 - 0:55</span>
   <h3>第4章</h3>
-  <h2>引退時に発動する「最強の必殺技」<br><span style="font-size:20px;color:var(--text2);font-weight:400">── 退職金スキーム</span></h2>
+  <h2>常識を疑え──<br>税法の「からくり」5選<br><span style="font-size:20px;color:var(--text2);font-weight:400">── 知った瞬間「ズルい」と思う。でも完全合法。</span></h2>
+
+  <div class="script">
+    「ここからが今日のクライマックスです。これから5つの"からくり"をお見せします。どれも直感に反します。"そんなのアリなの？"と思うはずです。でも全部、税法が認めています。知っている人だけが得をする世界の、最も象徴的な5つです。」
+  </div>
 </div>
 
+<!-- Karakuri 1: 4年落ち高級車 -->
 <div class="slide">
-  <h3>退職金の税制優遇</h3>
-  <h2>退職金は「半分」しか<br>課税されない。</h2>
+  <h3>からくり①</h3>
+  <h2>500万円のベンツを買うと、<br>500万円の経費になる。<br><span style="font-size:20px;color:var(--text2);font-weight:400">── しかも「1年」で。</span></h2>
 
-  <div style="text-align:center;margin:24px 0;font-size:18px;color:var(--text)">
-    課税退職所得 ＝（退職金 − 退職所得控除）× <span style="color:var(--green);font-size:28px;font-weight:900">1/2</span>
+  <div class="compare">
+    <div class="compare-box compare-bad">
+      <p style="font-size:12px;color:var(--accent2);font-weight:700;margin-bottom:4px">新車を買った場合</p>
+      <div style="font-size:18px;font-weight:700;color:var(--text)">500万円のベンツ（新車）</div>
+      <p style="font-size:14px;margin:8px 0 0;color:var(--text2)">耐用年数：6年<br>1年目の経費：約83万円<br><span style="color:var(--accent2)">全額経費化まで6年かかる</span></p>
+    </div>
+    <div class="compare-arrow">→</div>
+    <div class="compare-box compare-good">
+      <p style="font-size:12px;color:var(--green);font-weight:700;margin-bottom:4px">4年落ちの中古を買った場合</p>
+      <div style="font-size:18px;font-weight:700;color:var(--text)">500万円のベンツ（4年落ち）</div>
+      <p style="font-size:14px;margin:8px 0 0;color:var(--text2)">耐用年数：<strong style="color:var(--green)">2年</strong><br>定率法の償却率：<strong style="color:var(--green)">1.000</strong><br><span style="color:var(--green);font-weight:700">初年度に全額500万円が経費</span></p>
+    </div>
   </div>
 
-  <table>
-    <tr><th>勤続年数</th><th>退職所得控除</th></tr>
-    <tr><td>20年以下</td><td>40万円 × 勤続年数（最低80万円）</td></tr>
-    <tr><td>20年超</td><td>800万円 + 70万円 ×（勤続年数 − 20年）</td></tr>
-  </table>
-
-  <div class="box box-green">
-    <h4>具体例：勤続30年、退職金3,000万円の場合</h4>
-    <p>退職所得控除 = 800万 + 70万 × 10年 = <strong>1,500万円</strong></p>
-    <p>課税退職所得 = (3,000万 − 1,500万) × 1/2 = <strong>750万円</strong></p>
-    <p>所得税 = 約90万円（税率約3%）</p>
-    <p style="margin-top:12px">もし退職金ではなく「給与」として受け取ったら：<br>
-    所得税 + 住民税 = 約<strong style="color:var(--accent2)">900万円</strong>（税率約30%）</p>
-    <p style="margin-top:12px;font-size:18px;font-weight:700;color:var(--green)">差額：約810万円の節税。</p>
+  <div class="box box-accent">
+    <h4>なぜこうなるのか？──計算式の「からくり」</h4>
+    <p>中古資産の耐用年数（簡便法）＝（法定耐用年数 − 経過年数）＋ 経過年数 × 20%</p>
+    <p><strong>4年落ちの普通車：</strong>（6年 − 4年）＋ 4年 × 20% ＝ 2 ＋ 0.8 ＝ 2.8年 → <strong>切り捨てて2年</strong></p>
+    <p>2年の定率法償却率は<strong>1.000</strong>。つまり<strong>初年度に100%償却</strong>。</p>
+    <p style="margin-top:12px">税率30%なら、<strong style="color:var(--accent);font-size:18px">500万円 × 30% ＝ 150万円の節税</strong>。<br>
+    車は手元に残る。2〜3年後に300万円で売れれば、実質コスト50万円で150万円節税した計算。</p>
   </div>
 
   <div class="script">
-    「これが引退時に発動する"最強の必殺技"です。退職金3,000万円の場合、普通の給与として受け取ったら税金900万円。でも退職金として受け取れば税金たった90万円。差額810万円。なぜか？退職所得控除で1,500万円が非課税になり、残りも半分しか課税されないから。30年間コツコツ経営してきたご褒美として、国が用意した最大級の税優遇です。法人を作って、将来ここで受け取る設計にしておくかどうかで、数百万〜数千万の差が出ます。」
+    「これ、聞いた瞬間"嘘でしょ？"って思いますよね。でも本当です。新車のベンツ、耐用年数6年。6年かけてちょっとずつ経費になる。でも4年落ちの中古を買うと、計算式に入れると耐用年数が2年になる。そして2年の定率法償却率は"1.000"──つまり100%。初年度に全額経費になる。500万円の車を買って、500万円がその年の経費。税率30%なら150万円の税金が消える。しかも車は手元に残ります。2年後に300万で売れれば、実質タダどころかプラスです。これが"4年落ちベンツ"と呼ばれる有名なスキームです。もちろん、事業で実際に使っている必要があります。プライベート専用ならダメ。でも営業車として使い、走行記録をつけていれば完全に合法。」
+  </div>
+</div>
+
+<!-- Karakuri 2: 社宅 -->
+<div class="slide">
+  <h3>からくり②</h3>
+  <h2>家賃20万円のマンションに<br>月2〜3万円で住める。<br><span style="font-size:20px;color:var(--text2);font-weight:400">── 差額17万円は「税金ゼロ」。</span></h2>
+
+  <div class="box box-accent">
+    <h4>「社宅」の計算式</h4>
+    <p>法人が物件を借り、役員の住居とする場合、役員が法人に支払う「賃貸料相当額」はこの計算式で決まる：</p>
+    <div style="background:var(--surface2);padding:16px;border-radius:8px;margin:12px 0;font-size:15px;color:var(--text)">
+      賃貸料相当額 ＝ ①＋②＋③<br><br>
+      ① 建物の固定資産税の課税標準額 × <strong>0.2%</strong><br>
+      ② 12円 × 建物の総床面積 ÷ 3.3㎡<br>
+      ③ 敷地の固定資産税の課税標準額 × <strong>0.22%</strong>
+    </div>
+  </div>
+
+  <div class="box box-green">
+    <h4>具体例：都内1LDK（50㎡）家賃20万円の場合</h4>
+    <p>① 建物の課税標準額 800万円 × 0.2% ＝ <strong>16,000円</strong></p>
+    <p>② 12円 × 50㎡ ÷ 3.3㎡ ＝ <strong>182円</strong></p>
+    <p>③ 敷地の課税標準額 500万円 × 0.22% ＝ <strong>11,000円</strong></p>
+    <p>合計：<strong style="color:var(--green);font-size:20px">月額 27,182円</strong></p>
+    <p style="margin-top:12px">市場家賃20万円のマンションに月<strong>約2.7万円</strong>で住める。</p>
+    <p>差額 <strong>17.3万円/月 × 12ヶ月 ＝ 年間207.6万円</strong>が法人の経費になり、<br>
+    個人の給与課税もゼロ。<strong style="color:var(--accent);font-size:18px">年間60〜80万円の節税効果。</strong></p>
+  </div>
+
+  <div class="script">
+    「これが一番"バグ"っぽいやつです。法人が物件を借りて、役員が住む。役員が法人に払うべき家賃は、この計算式で決まる。ここ注目──係数が0.2%とか0.22%なんです。市場家賃20万円の都内マンション、計算式に入れると月2.7万円。差額の17万円は法人の経費。で、あなたの給与所得にもならない。17万円×12ヶ月＝年間207万円分の"見えない報酬"が、税金ゼロで手に入る。なぜこうなるかというと、この計算式は固定資産税ベースだから。固定資産税の評価額は、市場家賃より遥かに低い。この"ギャップ"が合法的に使えるんです。ただし、個人事業主はこれ使えません。法人限定です。これだけで法人化する価値がある、という人もいます。」
+  </div>
+</div>
+
+<!-- Karakuri 3: 短期前払費用 -->
+<div class="slide">
+  <h3>からくり③</h3>
+  <h2>12月に「来年の家賃1年分」を払うと、<br>今年の経費になる。<br><span style="font-size:20px;color:var(--text2);font-weight:400">── 時間軸をハックする「前払費用の特例」。</span></h2>
+
+  <div class="card-grid">
+    <div class="card compare-bad">
+      <h4 style="color:var(--accent2)">通常の考え方</h4>
+      <p>12月に1〜12月分の家賃120万円を前払い<br>→ 今年の経費は12月の1ヶ月分だけ（10万円）<br>→ 残り110万円は「前払費用」として来年以降に振り分け</p>
+    </div>
+    <div class="card compare-good">
+      <h4 style="color:var(--green)">短期前払費用の特例を使う</h4>
+      <p>12月に1〜12月分の家賃120万円を前払い<br>→ <strong style="color:var(--green)">今年の経費として全額120万円を計上可能</strong><br>→ 条件：1年以内の期間、継続適用</p>
+    </div>
+  </div>
+
+  <div class="box box-accent">
+    <h4>使えるもの・使えないもの</h4>
+    <table>
+      <tr><th>OK（等質等量のサービス）</th><th>NG</th></tr>
+      <tr><td>家賃・地代</td><td>税理士顧問料（月により内容が異なる）</td></tr>
+      <tr><td>保険料</td><td>広告掲載料（効果が月により変動）</td></tr>
+      <tr><td>リース料</td><td>コンサルティング料</td></tr>
+      <tr><td>サーバー利用料</td><td>変動する業務委託費</td></tr>
+    </table>
+    <p style="margin-top:8px"><strong>条件：</strong>①支払額が1年以内の期間に対応すること ②毎年継続して同じ処理を行うこと ③等質等量のサービスであること</p>
+  </div>
+
+  <div class="script">
+    「これも直感に反しますよね。12月31日に来年1年分の家賃を払う。普通に考えたら、来年の費用でしょ？でも"短期前払費用の特例"を使えば、今年の経費にできる。120万円をポンと払えば、今年の課税所得が120万円減る。税率30%なら36万円の節税。ただし条件があります。1年以内のサービスであること。毎年やり続けること。そして"毎月同じ品質のサービス"であること。家賃はOK。保険料もOK。でも税理士の顧問料は月ごとに内容が違うからNG。初年度に最も効果が大きい。翌年からは"前倒し"が常態化するので、追加効果はなくなります。でも最初の年は確実に効きます。」
+  </div>
+</div>
+
+<!-- Karakuri 4: 出張旅費規程 -->
+<div class="slide">
+  <h3>からくり④</h3>
+  <h2>同じ1万円が<br>「2回」節税に効く。<br><span style="font-size:20px;color:var(--text2);font-weight:400">── 出張旅費規程の「二重メリット」。</span></h2>
+
+  <div style="text-align:center;margin:20px 0">
+    <div style="display:inline-block;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px 32px;margin:8px">
+      <p style="font-size:13px;color:var(--accent);font-weight:700;margin-bottom:4px">法人側</p>
+      <p style="font-size:18px;font-weight:700;color:var(--text);margin:0">日当5,000円 → <span style="color:var(--green)">経費</span></p>
+      <p style="font-size:13px;color:var(--text2);margin:4px 0 0">法人の利益が5,000円減る → 法人税が減る</p>
+    </div>
+    <div style="display:inline-block;font-size:28px;color:var(--accent);vertical-align:middle;margin:0 8px">＋</div>
+    <div style="display:inline-block;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px 32px;margin:8px">
+      <p style="font-size:13px;color:var(--accent);font-weight:700;margin-bottom:4px">受け取る側（あなた）</p>
+      <p style="font-size:18px;font-weight:700;color:var(--text);margin:0">日当5,000円 → <span style="color:var(--green)">非課税</span></p>
+      <p style="font-size:13px;color:var(--text2);margin:4px 0 0">所得税も住民税も社保もかからない</p>
+    </div>
+  </div>
+
+  <div class="box box-green">
+    <h4>具体例：月10日出張する社長の場合</h4>
+    <p>日当 5,000円 × 10日 × 12ヶ月 ＝ <strong>年間60万円</strong></p>
+    <p>この60万円は：</p>
+    <ul>
+      <li>法人側：60万円の<strong>経費</strong>（法人税率25%なら15万円の節税）</li>
+      <li>個人側：60万円が<strong>非課税で手取り</strong>（所得税+住民税+社保ゼロ）</li>
+    </ul>
+    <p style="margin-top:8px">同じ60万円を「給与」として払ったら、所得税・住民税・社会保険で<strong style="color:var(--accent2)">約20〜25万円</strong>が消える。<br>
+    旅費規程なら<strong style="color:var(--green)">ゼロ</strong>。</p>
+    <p style="margin-top:12px;font-size:18px;font-weight:700;color:var(--accent)">つまり1万円の日当は、給与で払う場合より「1.5〜1.8万円分」の価値がある。</p>
+  </div>
+
+  <div class="script">
+    「これは税の世界で最も美しい"からくり"だと思います。出張旅費規程を作って、出張日当を1日5,000円と定める。社長が出張すると、会社は5,000円を経費にできる。法人税が減る。同時に、社長がもらう5,000円は非課税。所得税ゼロ、住民税ゼロ、社保ゼロ。同じ1万円が、出す側でも受け取る側でも税金を減らす。"二重メリット"です。もしこの5,000円を給与として払ったら、会社は経費にできるけど、個人側で所得税と社保がかかる。差額は年間20〜25万円。旅費規程を作るだけ──紙1枚で、です。ただし、実際に出張している記録が必要。出張報告書と交通費の記録は必ずつけてください。」
+  </div>
+</div>
+
+<!-- Karakuri 5: セーフティ共済タイムマシン -->
+<div class="slide">
+  <h3>からくり⑤</h3>
+  <h2>「税金のタイムマシン」<br>── 払うタイミングを操作する。<br><span style="font-size:20px;color:var(--text2);font-weight:400">経営セーフティ共済の「出口戦略」。</span></h2>
+
+  <div style="text-align:center;margin:20px 0">
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;display:inline-block;margin:8px;text-align:left;max-width:400px">
+      <p style="font-size:14px;color:var(--accent);font-weight:700;margin-bottom:8px">STEP 1：儲かっている年に加入</p>
+      <p style="font-size:14px;margin:0;color:var(--text2)">年240万円を経費に計上<br>→ 税率30%で<strong style="color:var(--green)">72万円の節税</strong></p>
+    </div>
+    <div style="display:inline-block;font-size:28px;color:var(--accent);vertical-align:middle;margin:4px 8px">→</div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;display:inline-block;margin:8px;text-align:left;max-width:400px">
+      <p style="font-size:14px;color:var(--accent);font-weight:700;margin-bottom:8px">STEP 2：40ヶ月以上積立て</p>
+      <p style="font-size:14px;margin:0;color:var(--text2)">解約すれば<strong style="color:var(--green)">100%戻ってくる</strong><br>最大800万円まで積立可能</p>
+    </div>
+  </div>
+  <div style="text-align:center;margin:0 0 16px">
+    <div style="display:inline-block;font-size:28px;color:var(--accent);margin:4px 8px">↓</div>
+  </div>
+  <div style="text-align:center">
+    <div style="background:var(--surface);border:2px solid var(--green);border-radius:12px;padding:20px;display:inline-block;text-align:left;max-width:500px">
+      <p style="font-size:14px;color:var(--green);font-weight:700;margin-bottom:8px">STEP 3：「税率が低いタイミング」で解約する</p>
+      <p style="font-size:14px;margin:0;color:var(--text2)">
+        <strong>パターンA：赤字の年に解約</strong><br>赤字と相殺されて課税ゼロ。払った税金が純粋に「消えた」ことになる。<br><br>
+        <strong>パターンB：法人化する年に解約</strong><br>個人事業を廃業＋法人設立。廃業の年に解約すれば、他の収入が少なく低い税率で済む。<br><br>
+        <strong>パターンC：大きな経費が出る年に解約</strong><br>設備投資や大規模修繕と同じ年に解約。経費と解約金が相殺。
+      </p>
+    </div>
+  </div>
+
+  <div class="box box-accent" style="margin-top:20px">
+    <h4>数字で見る「タイムマシン」の効果</h4>
+    <table>
+      <tr><th></th><th>加入時（税率30%の年）</th><th>解約時（赤字の年）</th><th>差額</th></tr>
+      <tr><td>掛金/解約金</td><td>240万円 支払い</td><td>240万円 受取り</td><td>±0</td></tr>
+      <tr><td>税金への影響</td><td><strong style="color:var(--green)">−72万円</strong>（節税）</td><td>0円（赤字と相殺）</td><td><strong style="color:var(--green)">72万円の純利益</strong></td></tr>
+    </table>
+    <p style="margin-top:8px">お金は1円も増えていない。ただ<strong>「いつ税金を払うか」をズラした</strong>だけ。でもそのズラし方次第で、税金が消える。これが「タイムマシン」の正体。</p>
+  </div>
+
+  <div class="script">
+    「さっき武器④で紹介した経営セーフティ共済、実はここからが本当の"からくり"です。加入して経費にする──ここまでは普通。でもポイントは"いつ解約するか"。解約すると全額が収入になりますよね。だから、儲かっている年に解約すると、結局同じだけ税金がかかって意味がない。でも、赤字の年に解約すれば？赤字と相殺されて、課税ゼロ。法人化する年に解約すれば？個人事業の収入が少ない年だから、低い税率で済む。つまり、税率30%の年に240万円を経費にして72万円節税。税率0%の年に解約して返してもらう。お金は増えてない。でも72万円の税金が"消えた"。これは時間軸を使った合法的な税金の最適化。僕はこれを"税金のタイムマシン"と呼んでいます。」
+  </div>
+</div>
+
+<!-- Karakuri Summary -->
+<div class="slide">
+  <h3>からくり5選まとめ</h3>
+  <h2>なぜこれらが「合法」なのか</h2>
+
+  <table>
+    <tr><th>#</th><th>からくり</th><th>直感</th><th>現実</th></tr>
+    <tr><td>①</td><td>4年落ち高級車</td><td>車は6年かけて経費になるはず</td><td><strong>中古は2年。初年度100%償却</strong></td></tr>
+    <tr><td>②</td><td>社宅の計算式</td><td>家賃20万なら20万払うべき</td><td><strong>計算式だと月2.7万円。差額は非課税</strong></td></tr>
+    <tr><td>③</td><td>短期前払費用</td><td>来年の費用は来年の経費</td><td><strong>1年以内なら今年の経費にできる</strong></td></tr>
+    <tr><td>④</td><td>出張旅費規程</td><td>払う側か受け取る側、片方だけ得</td><td><strong>両方が同時に得する（経費＋非課税）</strong></td></tr>
+    <tr><td>⑤</td><td>セーフティ共済</td><td>解約時に課税されて結局同じ</td><td><strong>解約タイミング次第で税金が「消える」</strong></td></tr>
+  </table>
+
+  <div class="quote">
+    これらはすべて、税法の条文に明記されたルールの「正しい使い方」です。<br>
+    ルールを知っている人が使い、知らない人が損をする──それが税金の世界の現実です。
+  </div>
+
+  <div class="script">
+    「この5つに共通するのは、どれも"税法の条文に書いてある"ということ。グレーゾーンではない。ルールブックに書いてある技を、ルール通りに使っているだけ。でも、このルールブックを読んでいる経営者がほとんどいない。だから差が出る。今日これを知ったあなたは、もう"知らない側"じゃない。あとは行動するだけです。」
   </div>
 </div>
 
 <!-- ========== CLOSING ========== -->
 <div class="slide">
-  <span class="tag tag-time">0:50 - 1:00</span>
+  <span class="tag tag-time">0:55 - 1:00</span>
   <h3>まとめ</h3>
   <h2>明日から実行する<br>アクションリスト</h2>
 
@@ -663,7 +842,8 @@ li strong{color:var(--text)}
       <ul>
         <li>小規模企業共済＋iDeCo＋セーフティ共済の3点セットに加入</li>
         <li>マイクロ法人スキームの検討（該当する方）</li>
-        <li>退職金スキームの設計（法人の方）</li>
+        <li>出張旅費規程の作成（法人の方）</li>
+        <li>社宅制度の導入検討（法人の方）</li>
       </ul>
     </div>
   </div>
